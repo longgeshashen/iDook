@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B27F53471B58A33E00D8D44C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F53461B58A33E00D8D44C /* main.m */; };
+		B27F534A1B58A33E00D8D44C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F53491B58A33E00D8D44C /* AppDelegate.m */; };
+		B27F534D1B58A33E00D8D44C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F534C1B58A33E00D8D44C /* ViewController.m */; };
+		B27F53501B58A33E00D8D44C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27F534E1B58A33E00D8D44C /* Main.storyboard */; };
+		B27F53521B58A33E00D8D44C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B27F53511B58A33E00D8D44C /* Images.xcassets */; };
+		B27F53551B58A33E00D8D44C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B27F53531B58A33E00D8D44C /* LaunchScreen.xib */; };
+		B27F53611B58A33E00D8D44C /* iDookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F53601B58A33E00D8D44C /* iDookTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B27F535B1B58A33E00D8D44C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B27F53391B58A33E00D8D44C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B27F53401B58A33E00D8D44C;
+			remoteInfo = iDook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B27F53411B58A33E00D8D44C /* iDook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B27F53451B58A33E00D8D44C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B27F53461B58A33E00D8D44C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B27F53481B58A33E00D8D44C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B27F53491B58A33E00D8D44C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B27F534B1B58A33E00D8D44C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B27F534C1B58A33E00D8D44C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B27F534F1B58A33E00D8D44C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B27F53511B58A33E00D8D44C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B27F53541B58A33E00D8D44C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B27F535A1B58A33E00D8D44C /* iDookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iDookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B27F535F1B58A33E00D8D44C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B27F53601B58A33E00D8D44C /* iDookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iDookTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B27F533E1B58A33E00D8D44C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B27F53571B58A33E00D8D44C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B27F53381B58A33E00D8D44C = {
+			isa = PBXGroup;
+			children = (
+				B27F53431B58A33E00D8D44C /* iDook */,
+				B27F535D1B58A33E00D8D44C /* iDookTests */,
+				B27F53421B58A33E00D8D44C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B27F53421B58A33E00D8D44C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B27F53411B58A33E00D8D44C /* iDook.app */,
+				B27F535A1B58A33E00D8D44C /* iDookTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B27F53431B58A33E00D8D44C /* iDook */ = {
+			isa = PBXGroup;
+			children = (
+				B27F53481B58A33E00D8D44C /* AppDelegate.h */,
+				B27F53491B58A33E00D8D44C /* AppDelegate.m */,
+				B27F534B1B58A33E00D8D44C /* ViewController.h */,
+				B27F534C1B58A33E00D8D44C /* ViewController.m */,
+				B27F534E1B58A33E00D8D44C /* Main.storyboard */,
+				B27F53511B58A33E00D8D44C /* Images.xcassets */,
+				B27F53531B58A33E00D8D44C /* LaunchScreen.xib */,
+				B27F53441B58A33E00D8D44C /* Supporting Files */,
+			);
+			path = iDook;
+			sourceTree = "<group>";
+		};
+		B27F53441B58A33E00D8D44C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B27F53451B58A33E00D8D44C /* Info.plist */,
+				B27F53461B58A33E00D8D44C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B27F535D1B58A33E00D8D44C /* iDookTests */ = {
+			isa = PBXGroup;
+			children = (
+				B27F53601B58A33E00D8D44C /* iDookTests.m */,
+				B27F535E1B58A33E00D8D44C /* Supporting Files */,
+			);
+			path = iDookTests;
+			sourceTree = "<group>";
+		};
+		B27F535E1B58A33E00D8D44C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B27F535F1B58A33E00D8D44C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B27F53401B58A33E00D8D44C /* iDook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B27F53641B58A33E00D8D44C /* Build configuration list for PBXNativeTarget "iDook" */;
+			buildPhases = (
+				B27F533D1B58A33E00D8D44C /* Sources */,
+				B27F533E1B58A33E00D8D44C /* Frameworks */,
+				B27F533F1B58A33E00D8D44C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iDook;
+			productName = iDook;
+			productReference = B27F53411B58A33E00D8D44C /* iDook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B27F53591B58A33E00D8D44C /* iDookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B27F53671B58A33E00D8D44C /* Build configuration list for PBXNativeTarget "iDookTests" */;
+			buildPhases = (
+				B27F53561B58A33E00D8D44C /* Sources */,
+				B27F53571B58A33E00D8D44C /* Frameworks */,
+				B27F53581B58A33E00D8D44C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B27F535C1B58A33E00D8D44C /* PBXTargetDependency */,
+			);
+			name = iDookTests;
+			productName = iDookTests;
+			productReference = B27F535A1B58A33E00D8D44C /* iDookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B27F53391B58A33E00D8D44C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = sunshilong;
+				TargetAttributes = {
+					B27F53401B58A33E00D8D44C = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					B27F53591B58A33E00D8D44C = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = B27F53401B58A33E00D8D44C;
+					};
+				};
+			};
+			buildConfigurationList = B27F533C1B58A33E00D8D44C /* Build configuration list for PBXProject "iDook" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B27F53381B58A33E00D8D44C;
+			productRefGroup = B27F53421B58A33E00D8D44C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B27F53401B58A33E00D8D44C /* iDook */,
+				B27F53591B58A33E00D8D44C /* iDookTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B27F533F1B58A33E00D8D44C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B27F53501B58A33E00D8D44C /* Main.storyboard in Resources */,
+				B27F53551B58A33E00D8D44C /* LaunchScreen.xib in Resources */,
+				B27F53521B58A33E00D8D44C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B27F53581B58A33E00D8D44C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B27F533D1B58A33E00D8D44C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B27F534D1B58A33E00D8D44C /* ViewController.m in Sources */,
+				B27F534A1B58A33E00D8D44C /* AppDelegate.m in Sources */,
+				B27F53471B58A33E00D8D44C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B27F53561B58A33E00D8D44C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B27F53611B58A33E00D8D44C /* iDookTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B27F535C1B58A33E00D8D44C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B27F53401B58A33E00D8D44C /* iDook */;
+			targetProxy = B27F535B1B58A33E00D8D44C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B27F534E1B58A33E00D8D44C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B27F534F1B58A33E00D8D44C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B27F53531B58A33E00D8D44C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B27F53541B58A33E00D8D44C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B27F53621B58A33E00D8D44C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B27F53631B58A33E00D8D44C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B27F53651B58A33E00D8D44C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = iDook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B27F53661B58A33E00D8D44C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = iDook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B27F53681B58A33E00D8D44C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = iDookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iDook.app/iDook";
+			};
+			name = Debug;
+		};
+		B27F53691B58A33E00D8D44C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = iDookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iDook.app/iDook";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B27F533C1B58A33E00D8D44C /* Build configuration list for PBXProject "iDook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B27F53621B58A33E00D8D44C /* Debug */,
+				B27F53631B58A33E00D8D44C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B27F53641B58A33E00D8D44C /* Build configuration list for PBXNativeTarget "iDook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B27F53651B58A33E00D8D44C /* Debug */,
+				B27F53661B58A33E00D8D44C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B27F53671B58A33E00D8D44C /* Build configuration list for PBXNativeTarget "iDookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B27F53681B58A33E00D8D44C /* Debug */,
+				B27F53691B58A33E00D8D44C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B27F53391B58A33E00D8D44C /* Project object */;
+}
