@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate,UITabBarControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UITabBarController *DKTabBarController;//主tabbar控制器
 
 
+
+#pragma mark ----刷新tabbar----
+- (void)reloadTabBar;
 @end
 

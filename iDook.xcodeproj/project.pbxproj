@@ -14,6 +14,18 @@
 		B27F53521B58A33E00D8D44C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B27F53511B58A33E00D8D44C /* Images.xcassets */; };
 		B27F53551B58A33E00D8D44C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B27F53531B58A33E00D8D44C /* LaunchScreen.xib */; };
 		B27F53611B58A33E00D8D44C /* iDookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F53601B58A33E00D8D44C /* iDookTests.m */; };
+		B27F53861B58DB8B00D8D44C /* DKBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F53851B58DB8B00D8D44C /* DKBaseNavigationViewController.m */; };
+		B27F538C1B58DC5800D8D44C /* DKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F538B1B58DC5800D8D44C /* DKBaseViewController.m */; };
+		B27F53961B58DEA100D8D44C /* DkActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F53941B58DEA100D8D44C /* DkActivityViewController.m */; };
+		B27F53971B58DEA100D8D44C /* DkActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B27F53951B58DEA100D8D44C /* DkActivityViewController.xib */; };
+		B27F539B1B58DECB00D8D44C /* DKAddressListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F53991B58DECB00D8D44C /* DKAddressListViewController.m */; };
+		B27F539C1B58DECB00D8D44C /* DKAddressListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B27F539A1B58DECB00D8D44C /* DKAddressListViewController.xib */; };
+		B27F53A01B58DEDB00D8D44C /* DkMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F539E1B58DEDB00D8D44C /* DkMineViewController.m */; };
+		B27F53A11B58DEDB00D8D44C /* DkMineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B27F539F1B58DEDB00D8D44C /* DkMineViewController.xib */; };
+		B27F53A51B58E33400D8D44C /* UITabBarItem+Universal.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F53A41B58E33400D8D44C /* UITabBarItem+Universal.m */; };
+		B27F53A91B58E73100D8D44C /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F53A81B58E73100D8D44C /* Tools.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B27F53AF1B58E83400D8D44C /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F53AE1B58E83400D8D44C /* SSKeychain.m */; };
+		B27F53BE1B59070500D8D44C /* DKDynamic.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F53BD1B59070500D8D44C /* DKDynamic.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +52,28 @@
 		B27F535A1B58A33E00D8D44C /* iDookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iDookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27F535F1B58A33E00D8D44C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B27F53601B58A33E00D8D44C /* iDookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iDookTests.m; sourceTree = "<group>"; };
+		B27F53841B58DB8B00D8D44C /* DKBaseNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKBaseNavigationViewController.h; sourceTree = "<group>"; };
+		B27F53851B58DB8B00D8D44C /* DKBaseNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKBaseNavigationViewController.m; sourceTree = "<group>"; };
+		B27F538A1B58DC5800D8D44C /* DKBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKBaseViewController.h; sourceTree = "<group>"; };
+		B27F538B1B58DC5800D8D44C /* DKBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKBaseViewController.m; sourceTree = "<group>"; };
+		B27F53931B58DEA100D8D44C /* DkActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DkActivityViewController.h; sourceTree = "<group>"; };
+		B27F53941B58DEA100D8D44C /* DkActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DkActivityViewController.m; sourceTree = "<group>"; };
+		B27F53951B58DEA100D8D44C /* DkActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DkActivityViewController.xib; sourceTree = "<group>"; };
+		B27F53981B58DECB00D8D44C /* DKAddressListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKAddressListViewController.h; sourceTree = "<group>"; };
+		B27F53991B58DECB00D8D44C /* DKAddressListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKAddressListViewController.m; sourceTree = "<group>"; };
+		B27F539A1B58DECB00D8D44C /* DKAddressListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DKAddressListViewController.xib; sourceTree = "<group>"; };
+		B27F539D1B58DEDB00D8D44C /* DkMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DkMineViewController.h; sourceTree = "<group>"; };
+		B27F539E1B58DEDB00D8D44C /* DkMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DkMineViewController.m; sourceTree = "<group>"; };
+		B27F539F1B58DEDB00D8D44C /* DkMineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DkMineViewController.xib; sourceTree = "<group>"; };
+		B27F53A31B58E33400D8D44C /* UITabBarItem+Universal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+Universal.h"; sourceTree = "<group>"; };
+		B27F53A41B58E33400D8D44C /* UITabBarItem+Universal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+Universal.m"; sourceTree = "<group>"; };
+		B27F53A61B58E4B400D8D44C /* iDookPCH.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iDookPCH.pch; sourceTree = "<group>"; };
+		B27F53A71B58E73100D8D44C /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
+		B27F53A81B58E73100D8D44C /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
+		B27F53AD1B58E83400D8D44C /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
+		B27F53AE1B58E83400D8D44C /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
+		B27F53BC1B59070500D8D44C /* DKDynamic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKDynamic.h; sourceTree = "<group>"; };
+		B27F53BD1B59070500D8D44C /* DKDynamic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKDynamic.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +115,16 @@
 		B27F53431B58A33E00D8D44C /* iDook */ = {
 			isa = PBXGroup;
 			children = (
+				B27F53A21B58E30A00D8D44C /* ThirdFrameworks */,
+				B27F53901B58DE5600D8D44C /* iDookActivity */,
+				B27F53911B58DE6100D8D44C /* iDookAddressList */,
+				B27F53921B58DE6800D8D44C /* iDookMine */,
+				B27F53831B58DB1000D8D44C /* iDookBaseViews */,
+				B27F53821B58DA5500D8D44C /* iDookModel */,
 				B27F53481B58A33E00D8D44C /* AppDelegate.h */,
 				B27F53491B58A33E00D8D44C /* AppDelegate.m */,
 				B27F534B1B58A33E00D8D44C /* ViewController.h */,
 				B27F534C1B58A33E00D8D44C /* ViewController.m */,
-				B27F534E1B58A33E00D8D44C /* Main.storyboard */,
-				B27F53511B58A33E00D8D44C /* Images.xcassets */,
-				B27F53531B58A33E00D8D44C /* LaunchScreen.xib */,
 				B27F53441B58A33E00D8D44C /* Supporting Files */,
 			);
 			path = iDook;
@@ -96,6 +133,10 @@
 		B27F53441B58A33E00D8D44C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B27F534E1B58A33E00D8D44C /* Main.storyboard */,
+				B27F53531B58A33E00D8D44C /* LaunchScreen.xib */,
+				B27F53511B58A33E00D8D44C /* Images.xcassets */,
+				B27F53A61B58E4B400D8D44C /* iDookPCH.pch */,
 				B27F53451B58A33E00D8D44C /* Info.plist */,
 				B27F53461B58A33E00D8D44C /* main.m */,
 			);
@@ -117,6 +158,77 @@
 				B27F535F1B58A33E00D8D44C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B27F53821B58DA5500D8D44C /* iDookModel */ = {
+			isa = PBXGroup;
+			children = (
+				B27F53BC1B59070500D8D44C /* DKDynamic.h */,
+				B27F53BD1B59070500D8D44C /* DKDynamic.m */,
+			);
+			path = iDookModel;
+			sourceTree = "<group>";
+		};
+		B27F53831B58DB1000D8D44C /* iDookBaseViews */ = {
+			isa = PBXGroup;
+			children = (
+				B27F53841B58DB8B00D8D44C /* DKBaseNavigationViewController.h */,
+				B27F53851B58DB8B00D8D44C /* DKBaseNavigationViewController.m */,
+				B27F538A1B58DC5800D8D44C /* DKBaseViewController.h */,
+				B27F538B1B58DC5800D8D44C /* DKBaseViewController.m */,
+			);
+			path = iDookBaseViews;
+			sourceTree = "<group>";
+		};
+		B27F53901B58DE5600D8D44C /* iDookActivity */ = {
+			isa = PBXGroup;
+			children = (
+				B27F53931B58DEA100D8D44C /* DkActivityViewController.h */,
+				B27F53941B58DEA100D8D44C /* DkActivityViewController.m */,
+				B27F53951B58DEA100D8D44C /* DkActivityViewController.xib */,
+			);
+			path = iDookActivity;
+			sourceTree = "<group>";
+		};
+		B27F53911B58DE6100D8D44C /* iDookAddressList */ = {
+			isa = PBXGroup;
+			children = (
+				B27F53981B58DECB00D8D44C /* DKAddressListViewController.h */,
+				B27F53991B58DECB00D8D44C /* DKAddressListViewController.m */,
+				B27F539A1B58DECB00D8D44C /* DKAddressListViewController.xib */,
+			);
+			path = iDookAddressList;
+			sourceTree = "<group>";
+		};
+		B27F53921B58DE6800D8D44C /* iDookMine */ = {
+			isa = PBXGroup;
+			children = (
+				B27F539D1B58DEDB00D8D44C /* DkMineViewController.h */,
+				B27F539E1B58DEDB00D8D44C /* DkMineViewController.m */,
+				B27F539F1B58DEDB00D8D44C /* DkMineViewController.xib */,
+			);
+			path = iDookMine;
+			sourceTree = "<group>";
+		};
+		B27F53A21B58E30A00D8D44C /* ThirdFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B27F53AC1B58E83400D8D44C /* SSKeychain */,
+				B27F53A71B58E73100D8D44C /* Tools.h */,
+				B27F53A81B58E73100D8D44C /* Tools.m */,
+				B27F53A31B58E33400D8D44C /* UITabBarItem+Universal.h */,
+				B27F53A41B58E33400D8D44C /* UITabBarItem+Universal.m */,
+			);
+			path = ThirdFrameworks;
+			sourceTree = "<group>";
+		};
+		B27F53AC1B58E83400D8D44C /* SSKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				B27F53AD1B58E83400D8D44C /* SSKeychain.h */,
+				B27F53AE1B58E83400D8D44C /* SSKeychain.m */,
+			);
+			path = SSKeychain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +280,7 @@
 				TargetAttributes = {
 					B27F53401B58A33E00D8D44C = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = WGT92H6A2L;
 					};
 					B27F53591B58A33E00D8D44C = {
 						CreatedOnToolsVersion = 6.4;
@@ -199,7 +312,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B27F53A11B58DEDB00D8D44C /* DkMineViewController.xib in Resources */,
+				B27F53971B58DEA100D8D44C /* DkActivityViewController.xib in Resources */,
 				B27F53501B58A33E00D8D44C /* Main.storyboard in Resources */,
+				B27F539C1B58DECB00D8D44C /* DKAddressListViewController.xib in Resources */,
 				B27F53551B58A33E00D8D44C /* LaunchScreen.xib in Resources */,
 				B27F53521B58A33E00D8D44C /* Images.xcassets in Resources */,
 			);
@@ -219,9 +335,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B27F53A01B58DEDB00D8D44C /* DkMineViewController.m in Sources */,
+				B27F53A91B58E73100D8D44C /* Tools.m in Sources */,
+				B27F53961B58DEA100D8D44C /* DkActivityViewController.m in Sources */,
 				B27F534D1B58A33E00D8D44C /* ViewController.m in Sources */,
+				B27F539B1B58DECB00D8D44C /* DKAddressListViewController.m in Sources */,
 				B27F534A1B58A33E00D8D44C /* AppDelegate.m in Sources */,
+				B27F53BE1B59070500D8D44C /* DKDynamic.m in Sources */,
 				B27F53471B58A33E00D8D44C /* main.m in Sources */,
+				B27F53861B58DB8B00D8D44C /* DKBaseNavigationViewController.m in Sources */,
+				B27F53AF1B58E83400D8D44C /* SSKeychain.m in Sources */,
+				B27F538C1B58DC5800D8D44C /* DKBaseViewController.m in Sources */,
+				B27F53A51B58E33400D8D44C /* UITabBarItem+Universal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +405,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xin Meng (GPHTA7398D)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xin Meng (GPHTA7398D)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -299,9 +425,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "53997028-38db-4962-a924-718467affc70";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -324,7 +451,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xin Meng (GPHTA7398D)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xin Meng (GPHTA7398D)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -337,8 +465,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "53997028-38db-4962-a924-718467affc70";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -349,9 +478,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xin Meng (GPHTA7398D)";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/iDook/iDookPCH.pch";
 				INFOPLIST_FILE = iDook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "53997028-38db-4962-a924-718467affc70";
 			};
 			name = Debug;
 		};
@@ -359,9 +492,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xin Meng (GPHTA7398D)";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/iDook/iDookPCH.pch";
 				INFOPLIST_FILE = iDook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "53997028-38db-4962-a924-718467affc70";
 			};
 			name = Release;
 		};
@@ -418,6 +555,7 @@
 				B27F53661B58A33E00D8D44C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B27F53671B58A33E00D8D44C /* Build configuration list for PBXNativeTarget "iDookTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +564,7 @@
 				B27F53691B58A33E00D8D44C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

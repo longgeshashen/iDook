@@ -1,0 +1,31 @@
+//
+//  iDookPCH.pch
+//  iDook
+//
+//  Created by sunshilong on 15/7/17.
+//  Copyright (c) 2015年 sunshilong. All rights reserved.
+//
+
+#ifndef iDook_iDookPCH_pch
+#define iDook_iDookPCH_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#pragma mark -----屏幕-----
+#define kWidth [UIScreen mainScreen].bounds.size.width
+#define kHeight [UIScreen mainScreen].bounds.size.height
+
+#pragma mark -----输出-----
+#define debugLog(...) NSLog(__VA_ARGS__)
+
+#pragma mark -----文件操作-----
+#define documentPath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+
+#pragma mark -----颜色-----
+#define colorClear [UIColor clearColor]
+#define colorBackGround [UIColor whiteColor]
+#define colorTabBar [UIColor colorWithRed:22/255.0 green:170/255.0 blue:254/255.0 alpha:1]
+#define colorNavbg [UIColor colorWithRed:25/255.0 green:31/255.0 blue:33/255.0 alpha:1]
+
+
+#endif
