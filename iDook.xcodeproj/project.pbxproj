@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B25E2F291B59F93100F48886 /* DKActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B25E2F271B59F93100F48886 /* DKActivityTableViewCell.m */; };
+		B25E2F2A1B59F93100F48886 /* DKActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B25E2F281B59F93100F48886 /* DKActivityTableViewCell.xib */; };
 		B27F53471B58A33E00D8D44C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F53461B58A33E00D8D44C /* main.m */; };
 		B27F534A1B58A33E00D8D44C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F53491B58A33E00D8D44C /* AppDelegate.m */; };
 		B27F534D1B58A33E00D8D44C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F534C1B58A33E00D8D44C /* ViewController.m */; };
@@ -39,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B25E2F261B59F93100F48886 /* DKActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKActivityTableViewCell.h; sourceTree = "<group>"; };
+		B25E2F271B59F93100F48886 /* DKActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKActivityTableViewCell.m; sourceTree = "<group>"; };
+		B25E2F281B59F93100F48886 /* DKActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DKActivityTableViewCell.xib; sourceTree = "<group>"; };
+		B25E2F2B1B5A014900F48886 /* toolConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = toolConfig.h; sourceTree = "<group>"; };
 		B27F53411B58A33E00D8D44C /* iDook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27F53451B58A33E00D8D44C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B27F53461B58A33E00D8D44C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -186,6 +192,9 @@
 				B27F53931B58DEA100D8D44C /* DkActivityViewController.h */,
 				B27F53941B58DEA100D8D44C /* DkActivityViewController.m */,
 				B27F53951B58DEA100D8D44C /* DkActivityViewController.xib */,
+				B25E2F261B59F93100F48886 /* DKActivityTableViewCell.h */,
+				B25E2F271B59F93100F48886 /* DKActivityTableViewCell.m */,
+				B25E2F281B59F93100F48886 /* DKActivityTableViewCell.xib */,
 			);
 			path = iDookActivity;
 			sourceTree = "<group>";
@@ -216,6 +225,7 @@
 				B27F53AC1B58E83400D8D44C /* SSKeychain */,
 				B27F53A71B58E73100D8D44C /* Tools.h */,
 				B27F53A81B58E73100D8D44C /* Tools.m */,
+				B25E2F2B1B5A014900F48886 /* toolConfig.h */,
 				B27F53A31B58E33400D8D44C /* UITabBarItem+Universal.h */,
 				B27F53A41B58E33400D8D44C /* UITabBarItem+Universal.m */,
 			);
@@ -318,6 +328,7 @@
 				B27F539C1B58DECB00D8D44C /* DKAddressListViewController.xib in Resources */,
 				B27F53551B58A33E00D8D44C /* LaunchScreen.xib in Resources */,
 				B27F53521B58A33E00D8D44C /* Images.xcassets in Resources */,
+				B25E2F2A1B59F93100F48886 /* DKActivityTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +354,7 @@
 				B27F534A1B58A33E00D8D44C /* AppDelegate.m in Sources */,
 				B27F53BE1B59070500D8D44C /* DKDynamic.m in Sources */,
 				B27F53471B58A33E00D8D44C /* main.m in Sources */,
+				B25E2F291B59F93100F48886 /* DKActivityTableViewCell.m in Sources */,
 				B27F53861B58DB8B00D8D44C /* DKBaseNavigationViewController.m in Sources */,
 				B27F53AF1B58E83400D8D44C /* SSKeychain.m in Sources */,
 				B27F538C1B58DC5800D8D44C /* DKBaseViewController.m in Sources */,

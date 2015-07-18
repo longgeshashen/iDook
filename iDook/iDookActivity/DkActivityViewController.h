@@ -8,6 +8,8 @@
 
 #import "DKBaseViewController.h"
 
-@interface DkActivityViewController : DKBaseViewController
+@interface DkActivityViewController : DKBaseViewController<UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic,retain) UITableView *dkActTableView;//动态列表
 
 @end

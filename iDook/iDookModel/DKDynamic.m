@@ -10,4 +10,15 @@
 
 @implementation DKDynamic
 
+@synthesize dynamicHostId = _dynamicHostId;
+@synthesize dynamicImage = _dynamicImage;
+@synthesize dynamicTitle = _dynamicTitle;
+@synthesize dynamicDesc = _dynamicDesc;
+@synthesize dynamicURL = _dynamicURL;
+
+@synthesize praiseCount;
+@synthesize lookCount;
+@synthesize forwardCount;
+@synthesize isPraise;
+
 @end

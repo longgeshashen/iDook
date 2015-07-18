@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D7F4E612-8999-48E4-8DD8-94C3B611FD89</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iDook</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1BC6D90D8F010B4F68D781B1890C2C78FB1646CB</key>
+		<string>https://github.com/longgeshashen/iDook.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iDook.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1BC6D90D8F010B4F68D781B1890C2C78FB1646CB</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/longgeshashen/iDook.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1BC6D90D8F010B4F68D781B1890C2C78FB1646CB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1BC6D90D8F010B4F68D781B1890C2C78FB1646CB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iDook</string>
+		</dict>
+	</array>
+</dict>
+</plist>
