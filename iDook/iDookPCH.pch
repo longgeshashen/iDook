@@ -26,6 +26,18 @@
 #define colorBackGround [UIColor whiteColor]
 #define colorTabBar [UIColor colorWithRed:22/255.0 green:170/255.0 blue:254/255.0 alpha:1]
 #define colorNavbg [UIColor colorWithRed:25/255.0 green:31/255.0 blue:33/255.0 alpha:1]
+#define colorLineView  [UIColor colorWithRed:220/255.0 green:220/255.0 blue:220/255.0 alpha:1.0]
 
+#define kWidth [UIScreen mainScreen].bounds.size.width
+#define kHeight [UIScreen mainScreen].bounds.size.height
+
+#define kDeviceVersion [[[UIDevice currentDevice] systemVersion] floatValue]
+#define kIphone5  [UIScreen mainScreen].bounds.size.height == 568
+#define kIphone4  [UIScreen mainScreen].bounds.size.height == 480
+#define kIphone6  [UIScreen mainScreen].bounds.size.height == 667
+#define kIphone6plus [UIScreen mainScreen].bounds.size.height == 960
+
+#define autoSizeScaleX kIphone6?1.171875:(kIphone6plus?1.29375:1)
+#define autoSizeScaleY kIphone6?1.17429577:(kIphone6plus?1.2957:1)
 
 #endif

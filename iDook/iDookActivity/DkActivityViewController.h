@@ -7,9 +7,10 @@
 //  动态
 
 #import "DKBaseViewController.h"
+#import "DKActivityTableViewCell.h"
 
-@interface DkActivityViewController : DKBaseViewController<UITableViewDataSource,UITableViewDelegate>
+@interface DkActivityViewController : DKBaseViewController<UITableViewDataSource,UITableViewDelegate,DKActivityTableViewCellDelegate>
 
-@property (nonatomic,retain) UITableView *dkActTableView;//动态列表
+@property (nonatomic,retain) UITableView *dkActTableView;/**<动态列表*/
 
 @end

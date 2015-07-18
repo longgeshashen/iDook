@@ -448,7 +448,19 @@
 }
 
 #pragma mark --------
-
++(CGPoint)myCGPoint:(float)x AndY:(float)y
+{
+    CGPoint point;
+    point.x = x *autoSizeScaleX;
+    point.y = y *autoSizeScaleY;
+    return point;
+}
++(CGFloat)myYOrHeight:(float)var
+{
+    float var1 = autoSizeScaleY;
+    float newVar = var *var1;
+    return newVar;
+}
 
 
 @end

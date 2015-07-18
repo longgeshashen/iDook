@@ -116,6 +116,10 @@
 +(NSString*)GetPathForResource:(NSString *)name;
 +(NSString*)GetPathForResource:(NSString *)name inDir:(NSString*)dir;
 #pragma mark --------
-
+/**
+ 自定义的Point
+ */
++(CGPoint)myCGPoint:(float)x AndY:(float)y;
++(CGFloat)myYOrHeight:(float)var;
 
 @end

@@ -44,7 +44,6 @@
 		B25E2F261B59F93100F48886 /* DKActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKActivityTableViewCell.h; sourceTree = "<group>"; };
 		B25E2F271B59F93100F48886 /* DKActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKActivityTableViewCell.m; sourceTree = "<group>"; };
 		B25E2F281B59F93100F48886 /* DKActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DKActivityTableViewCell.xib; sourceTree = "<group>"; };
-		B25E2F2B1B5A014900F48886 /* toolConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = toolConfig.h; sourceTree = "<group>"; };
 		B27F53411B58A33E00D8D44C /* iDook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27F53451B58A33E00D8D44C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B27F53461B58A33E00D8D44C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -225,7 +224,6 @@
 				B27F53AC1B58E83400D8D44C /* SSKeychain */,
 				B27F53A71B58E73100D8D44C /* Tools.h */,
 				B27F53A81B58E73100D8D44C /* Tools.m */,
-				B25E2F2B1B5A014900F48886 /* toolConfig.h */,
 				B27F53A31B58E33400D8D44C /* UITabBarItem+Universal.h */,
 				B27F53A41B58E33400D8D44C /* UITabBarItem+Universal.m */,
 			);
@@ -440,7 +438,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "53997028-38db-4962-a924-718467affc70";
+				PROVISIONING_PROFILE = "c40284d2-7cd0-4e39-a153-4b2f5846baa2";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -479,7 +477,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "53997028-38db-4962-a924-718467affc70";
+				PROVISIONING_PROFILE = "c40284d2-7cd0-4e39-a153-4b2f5846baa2";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -496,7 +494,7 @@
 				INFOPLIST_FILE = iDook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "53997028-38db-4962-a924-718467affc70";
+				PROVISIONING_PROFILE = "c40284d2-7cd0-4e39-a153-4b2f5846baa2";
 			};
 			name = Debug;
 		};
@@ -510,7 +508,7 @@
 				INFOPLIST_FILE = iDook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "53997028-38db-4962-a924-718467affc70";
+				PROVISIONING_PROFILE = "c40284d2-7cd0-4e39-a153-4b2f5846baa2";
 			};
 			name = Release;
 		};

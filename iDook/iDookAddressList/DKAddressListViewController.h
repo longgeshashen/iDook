@@ -8,6 +8,9 @@
 
 #import "DKBaseViewController.h"
 
-@interface DKAddressListViewController : DKBaseViewController
+@interface DKAddressListViewController : DKBaseViewController<UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic,retain) UITableView *addresstableView;/**<通讯录列表*/
+
 
 @end
