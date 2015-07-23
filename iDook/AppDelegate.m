@@ -27,9 +27,9 @@
     
 
     NSArray *tabImage = @[@"btnav-act",@"btnav-mclass",@"btnav-my"];
-    NSArray *tabImage_select = @[@"btnav-act",@"btnav-mclass",@"btnav-my"];//这里可以不加选中变色的图片
+    NSArray *tabImage_select = @[@"btnav-act2",@"btnav-mclass2",@"btnav-my2"];//这里可以不加选中变色的图片
     NSArray *viewControllerArray=@[@"DkActivityViewController",@"DKAddressListViewController",@"DkMineViewController"];
-    NSArray *tabTitle=@[@"动态",@"通讯录",@"我的"];
+    NSArray *tabTitle=@[@"图文",@"线索",@"我的"];
     NSMutableArray *recordViewControllers=[[NSMutableArray alloc]initWithCapacity:0];
     for (unsigned i=0; i<[viewControllerArray count]; i++) {
         NSString *viewControllersString=[viewControllerArray objectAtIndex:i];
@@ -42,18 +42,25 @@
         [_navigationController setTabBarItem:tabBarItem];
         [recordViewControllers addObject:_navigationController];
     }
-    [[UITabBarItem appearance] setTitleTextAttributes:
-     @{ UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0, 0)],
-        UITextAttributeTextColor: colorTabBar,UITextAttributeFont:[UIFont systemFontOfSize:13 weight:1.0]} forState:UIControlStateSelected];
-    [[UITabBarItem appearance] setTitleTextAttributes:
-     @{ UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0, 0)],
-        UITextAttributeTextColor: [UIColor darkGrayColor],UITextAttributeFont:[UIFont systemFontOfSize:13 weight:1.0]} forState:UIControlStateNormal];
-    
+    //tabbar选中颜色和title颜色
     if ([[[UIDevice currentDevice]systemVersion]floatValue]<7.0) {
         
         [[UITabBar appearance] setBackgroundImage:[Tools createImageWithColor:[UIColor colorWithRed:1.000 green:1.000 blue:1.000 alpha:1]]];
         
         [[UITabBar appearance] setSelectionIndicatorImage:[UIImage new]];
+        [[UITabBarItem appearance] setTitleTextAttributes:
+         @{ UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0, 0)],
+            UITextAttributeTextColor: [UIColor colorWithRed:22/255.0 green:170/255.0 blue:254/255.0 alpha:1.0] }
+                                                 forState:UIControlStateSelected];
+        
+    }else{
+        [[UITabBarItem appearance] setTitleTextAttributes:
+         @{ UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0, 0)],
+            UITextAttributeTextColor: colorTabBar,UITextAttributeFont:[UIFont systemFontOfSize:13 weight:1.0]} forState:UIControlStateSelected];
+        [[UITabBarItem appearance] setTitleTextAttributes:
+         @{ UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0, 0)],
+            UITextAttributeTextColor: [UIColor darkGrayColor],UITextAttributeFont:[UIFont systemFontOfSize:13 weight:1.0]} forState:UIControlStateNormal];
+
     }
     
     [DKTabBarController.tabBar setSelectedImageTintColor:colorTabBar];

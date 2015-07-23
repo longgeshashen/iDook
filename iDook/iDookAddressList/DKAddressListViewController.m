@@ -19,7 +19,7 @@
     self.isBoot = YES;
     [super viewDidLoad];
     NSLog(@"通讯录页面");
-    self.title = @"通讯录";
+    self.title = @"线索";
     [self loadMydata];
     [self loadMyView];
 }

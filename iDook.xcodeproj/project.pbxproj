@@ -28,6 +28,16 @@
 		B27F53A91B58E73100D8D44C /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F53A81B58E73100D8D44C /* Tools.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B27F53AF1B58E83400D8D44C /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F53AE1B58E83400D8D44C /* SSKeychain.m */; };
 		B27F53BE1B59070500D8D44C /* DKDynamic.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F53BD1B59070500D8D44C /* DKDynamic.m */; };
+		B29810A31B60927C00DE374B /* createImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B29810A21B60927C00DE374B /* createImage.jpg */; };
+		B29810A71B60BFAB00DE374B /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = B29810A61B60BFAB00DE374B /* UIView+Toast.m */; };
+		B29810AD1B60C56B00DE374B /* CTAssetsPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29810AA1B60C56B00DE374B /* CTAssetsPickerController.m */; };
+		B29810AE1B60C56B00DE374B /* PhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29810AC1B60C56B00DE374B /* PhotoPickerController.m */; };
+		B29810B11B60CBA800DE374B /* NSDate+TimeInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = B29810B01B60CBA800DE374B /* NSDate+TimeInterval.m */; };
+		B29810B61B60F31600DE374B /* DKShowBigImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29810B51B60F31600DE374B /* DKShowBigImageViewController.m */; };
+		B2CEC5B71B5DCF9400FF19E4 /* DKCreateActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CEC5B51B5DCF9400FF19E4 /* DKCreateActivityViewController.m */; };
+		B2CEC5B81B5DCF9400FF19E4 /* DKCreateActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2CEC5B61B5DCF9400FF19E4 /* DKCreateActivityViewController.xib */; };
+		B2CEC5BC1B5DF00200FF19E4 /* EScrollerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CEC5BB1B5DF00200FF19E4 /* EScrollerView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B2CEC5BF1B5DF0B100FF19E4 /* DkAddImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CEC5BE1B5DF0B100FF19E4 /* DkAddImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +89,25 @@
 		B27F53AE1B58E83400D8D44C /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
 		B27F53BC1B59070500D8D44C /* DKDynamic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKDynamic.h; sourceTree = "<group>"; };
 		B27F53BD1B59070500D8D44C /* DKDynamic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKDynamic.m; sourceTree = "<group>"; };
+		B29810A21B60927C00DE374B /* createImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = createImage.jpg; sourceTree = "<group>"; };
+		B29810A51B60BFAB00DE374B /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		B29810A61B60BFAB00DE374B /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		B29810A91B60C56B00DE374B /* CTAssetsPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAssetsPickerController.h; sourceTree = "<group>"; };
+		B29810AA1B60C56B00DE374B /* CTAssetsPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAssetsPickerController.m; sourceTree = "<group>"; };
+		B29810AB1B60C56B00DE374B /* PhotoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoPickerController.h; sourceTree = "<group>"; };
+		B29810AC1B60C56B00DE374B /* PhotoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPickerController.m; sourceTree = "<group>"; };
+		B29810AF1B60CBA800DE374B /* NSDate+TimeInterval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TimeInterval.h"; sourceTree = "<group>"; };
+		B29810B01B60CBA800DE374B /* NSDate+TimeInterval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TimeInterval.m"; sourceTree = "<group>"; };
+		B29810B21B60F1BE00DE374B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B29810B41B60F31600DE374B /* DKShowBigImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKShowBigImageViewController.h; sourceTree = "<group>"; };
+		B29810B51B60F31600DE374B /* DKShowBigImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKShowBigImageViewController.m; sourceTree = "<group>"; };
+		B2CEC5B41B5DCF9400FF19E4 /* DKCreateActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKCreateActivityViewController.h; sourceTree = "<group>"; };
+		B2CEC5B51B5DCF9400FF19E4 /* DKCreateActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKCreateActivityViewController.m; sourceTree = "<group>"; };
+		B2CEC5B61B5DCF9400FF19E4 /* DKCreateActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DKCreateActivityViewController.xib; sourceTree = "<group>"; };
+		B2CEC5BA1B5DF00200FF19E4 /* EScrollerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EScrollerView.h; sourceTree = "<group>"; };
+		B2CEC5BB1B5DF00200FF19E4 /* EScrollerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EScrollerView.m; sourceTree = "<group>"; };
+		B2CEC5BD1B5DF0B100FF19E4 /* DkAddImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DkAddImageView.h; sourceTree = "<group>"; };
+		B2CEC5BE1B5DF0B100FF19E4 /* DkAddImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DkAddImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +131,7 @@
 		B27F53381B58A33E00D8D44C = {
 			isa = PBXGroup;
 			children = (
+				B29810B21B60F1BE00DE374B /* AVFoundation.framework */,
 				B27F53431B58A33E00D8D44C /* iDook */,
 				B27F535D1B58A33E00D8D44C /* iDookTests */,
 				B27F53421B58A33E00D8D44C /* Products */,
@@ -120,12 +150,12 @@
 		B27F53431B58A33E00D8D44C /* iDook */ = {
 			isa = PBXGroup;
 			children = (
+				B27F53821B58DA5500D8D44C /* iDookModel */,
+				B27F53831B58DB1000D8D44C /* iDookBaseViews */,
 				B27F53A21B58E30A00D8D44C /* ThirdFrameworks */,
 				B27F53901B58DE5600D8D44C /* iDookActivity */,
 				B27F53911B58DE6100D8D44C /* iDookAddressList */,
 				B27F53921B58DE6800D8D44C /* iDookMine */,
-				B27F53831B58DB1000D8D44C /* iDookBaseViews */,
-				B27F53821B58DA5500D8D44C /* iDookModel */,
 				B27F53481B58A33E00D8D44C /* AppDelegate.h */,
 				B27F53491B58A33E00D8D44C /* AppDelegate.m */,
 				B27F534B1B58A33E00D8D44C /* ViewController.h */,
@@ -138,6 +168,7 @@
 		B27F53441B58A33E00D8D44C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B29810A21B60927C00DE374B /* createImage.jpg */,
 				B27F534E1B58A33E00D8D44C /* Main.storyboard */,
 				B27F53531B58A33E00D8D44C /* LaunchScreen.xib */,
 				B27F53511B58A33E00D8D44C /* Images.xcassets */,
@@ -194,6 +225,13 @@
 				B25E2F261B59F93100F48886 /* DKActivityTableViewCell.h */,
 				B25E2F271B59F93100F48886 /* DKActivityTableViewCell.m */,
 				B25E2F281B59F93100F48886 /* DKActivityTableViewCell.xib */,
+				B2CEC5B41B5DCF9400FF19E4 /* DKCreateActivityViewController.h */,
+				B2CEC5B51B5DCF9400FF19E4 /* DKCreateActivityViewController.m */,
+				B2CEC5B61B5DCF9400FF19E4 /* DKCreateActivityViewController.xib */,
+				B2CEC5BD1B5DF0B100FF19E4 /* DkAddImageView.h */,
+				B2CEC5BE1B5DF0B100FF19E4 /* DkAddImageView.m */,
+				B29810B41B60F31600DE374B /* DKShowBigImageViewController.h */,
+				B29810B51B60F31600DE374B /* DKShowBigImageViewController.m */,
 			);
 			path = iDookActivity;
 			sourceTree = "<group>";
@@ -221,6 +259,9 @@
 		B27F53A21B58E30A00D8D44C /* ThirdFrameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B29810A81B60C55B00DE374B /* GetImage */,
+				B29810A41B60BF9E00DE374B /* UIView+Toast */,
+				B2CEC5B91B5DEFF500FF19E4 /* ScrollView */,
 				B27F53AC1B58E83400D8D44C /* SSKeychain */,
 				B27F53A71B58E73100D8D44C /* Tools.h */,
 				B27F53A81B58E73100D8D44C /* Tools.m */,
@@ -237,6 +278,37 @@
 				B27F53AE1B58E83400D8D44C /* SSKeychain.m */,
 			);
 			path = SSKeychain;
+			sourceTree = "<group>";
+		};
+		B29810A41B60BF9E00DE374B /* UIView+Toast */ = {
+			isa = PBXGroup;
+			children = (
+				B29810A51B60BFAB00DE374B /* UIView+Toast.h */,
+				B29810A61B60BFAB00DE374B /* UIView+Toast.m */,
+			);
+			path = "UIView+Toast";
+			sourceTree = "<group>";
+		};
+		B29810A81B60C55B00DE374B /* GetImage */ = {
+			isa = PBXGroup;
+			children = (
+				B29810A91B60C56B00DE374B /* CTAssetsPickerController.h */,
+				B29810AA1B60C56B00DE374B /* CTAssetsPickerController.m */,
+				B29810AF1B60CBA800DE374B /* NSDate+TimeInterval.h */,
+				B29810B01B60CBA800DE374B /* NSDate+TimeInterval.m */,
+				B29810AB1B60C56B00DE374B /* PhotoPickerController.h */,
+				B29810AC1B60C56B00DE374B /* PhotoPickerController.m */,
+			);
+			path = GetImage;
+			sourceTree = "<group>";
+		};
+		B2CEC5B91B5DEFF500FF19E4 /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				B2CEC5BA1B5DF00200FF19E4 /* EScrollerView.h */,
+				B2CEC5BB1B5DF00200FF19E4 /* EScrollerView.m */,
+			);
+			path = ScrollView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,11 +394,13 @@
 			files = (
 				B27F53A11B58DEDB00D8D44C /* DkMineViewController.xib in Resources */,
 				B27F53971B58DEA100D8D44C /* DkActivityViewController.xib in Resources */,
+				B2CEC5B81B5DCF9400FF19E4 /* DKCreateActivityViewController.xib in Resources */,
 				B27F53501B58A33E00D8D44C /* Main.storyboard in Resources */,
 				B27F539C1B58DECB00D8D44C /* DKAddressListViewController.xib in Resources */,
 				B27F53551B58A33E00D8D44C /* LaunchScreen.xib in Resources */,
 				B27F53521B58A33E00D8D44C /* Images.xcassets in Resources */,
 				B25E2F2A1B59F93100F48886 /* DKActivityTableViewCell.xib in Resources */,
+				B29810A31B60927C00DE374B /* createImage.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,16 +418,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B29810AE1B60C56B00DE374B /* PhotoPickerController.m in Sources */,
+				B2CEC5B71B5DCF9400FF19E4 /* DKCreateActivityViewController.m in Sources */,
+				B2CEC5BF1B5DF0B100FF19E4 /* DkAddImageView.m in Sources */,
 				B27F53A01B58DEDB00D8D44C /* DkMineViewController.m in Sources */,
+				B29810AD1B60C56B00DE374B /* CTAssetsPickerController.m in Sources */,
 				B27F53A91B58E73100D8D44C /* Tools.m in Sources */,
 				B27F53961B58DEA100D8D44C /* DkActivityViewController.m in Sources */,
 				B27F534D1B58A33E00D8D44C /* ViewController.m in Sources */,
+				B2CEC5BC1B5DF00200FF19E4 /* EScrollerView.m in Sources */,
 				B27F539B1B58DECB00D8D44C /* DKAddressListViewController.m in Sources */,
+				B29810B11B60CBA800DE374B /* NSDate+TimeInterval.m in Sources */,
+				B29810A71B60BFAB00DE374B /* UIView+Toast.m in Sources */,
 				B27F534A1B58A33E00D8D44C /* AppDelegate.m in Sources */,
 				B27F53BE1B59070500D8D44C /* DKDynamic.m in Sources */,
 				B27F53471B58A33E00D8D44C /* main.m in Sources */,
 				B25E2F291B59F93100F48886 /* DKActivityTableViewCell.m in Sources */,
 				B27F53861B58DB8B00D8D44C /* DKBaseNavigationViewController.m in Sources */,
+				B29810B61B60F31600DE374B /* DKShowBigImageViewController.m in Sources */,
 				B27F53AF1B58E83400D8D44C /* SSKeychain.m in Sources */,
 				B27F538C1B58DC5800D8D44C /* DKBaseViewController.m in Sources */,
 				B27F53A51B58E33400D8D44C /* UITabBarItem+Universal.m in Sources */,
@@ -415,8 +497,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Xin Meng (GPHTA7398D)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xin Meng (GPHTA7398D)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -438,7 +520,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "c40284d2-7cd0-4e39-a153-4b2f5846baa2";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -461,8 +543,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Xin Meng (GPHTA7398D)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xin Meng (GPHTA7398D)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -477,7 +559,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "c40284d2-7cd0-4e39-a153-4b2f5846baa2";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -494,7 +576,7 @@
 				INFOPLIST_FILE = iDook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c40284d2-7cd0-4e39-a153-4b2f5846baa2";
+				PROVISIONING_PROFILE = "97b0ca88-6b7d-4e42-adc8-e561cedcfeb4";
 			};
 			name = Debug;
 		};
@@ -508,7 +590,7 @@
 				INFOPLIST_FILE = iDook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c40284d2-7cd0-4e39-a153-4b2f5846baa2";
+				PROVISIONING_PROFILE = "97b0ca88-6b7d-4e42-adc8-e561cedcfeb4";
 			};
 			name = Release;
 		};

@@ -14,6 +14,8 @@
 
 @implementation DKBaseViewController
 @synthesize isBoot;
+@synthesize pageName;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadViews];

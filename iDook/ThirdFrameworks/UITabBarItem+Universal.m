@@ -14,8 +14,6 @@
     UITabBarItem *tabBarItem = nil;
     if ([[[UIDevice currentDevice] systemVersion]floatValue]>=7.0) {
         tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:image selectedImage:selectedImage];
-        [tabBarItem setFinishedSelectedImage:selectedImage withFinishedUnselectedImage:image];
-        
     } else {
         tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:nil tag:0];
         [tabBarItem setFinishedSelectedImage:selectedImage withFinishedUnselectedImage:image];

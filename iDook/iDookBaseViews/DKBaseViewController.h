@@ -11,6 +11,7 @@
 @interface DKBaseViewController : UIViewController
 
 @property (nonatomic, assign) BOOL isBoot;//是否是根视图，不是加返回按钮
+@property (nonatomic, retain) NSString *pageName;//页面title
 
 - (void)loadViews; //加载基本试图
 - (void)backButtonClick:(UIButton *)btn;//返回按钮
