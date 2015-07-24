@@ -102,7 +102,7 @@
         [[UIAlertView alloc] initWithTitle: @"Warning"
 								   message: [err localizedDescription]
 								  delegate: nil
-						 cancelButtonTitle:@"OK"
+						 cancelButtonTitle:@"确定"
 						 otherButtonTitles:nil];
         [alert show];
         return;
@@ -115,10 +115,10 @@
 	BOOL audioHWAvailable = audioSession.inputIsAvailable;
 	if (! audioHWAvailable) {
         UIAlertView *cantRecordAlert =
-        [[UIAlertView alloc] initWithTitle: @"Warning"
-								   message: @"Audio input hardware not available"
+        [[UIAlertView alloc] initWithTitle: @"录音失败"
+								   message: @"您的语音设备无法使用，请检查"
 								  delegate: nil
-						 cancelButtonTitle:@"OK"
+						 cancelButtonTitle:@"确定"
 						 otherButtonTitles:nil];
         [cantRecordAlert show];
         return;
