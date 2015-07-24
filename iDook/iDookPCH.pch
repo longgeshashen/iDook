@@ -13,6 +13,9 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 #import "UIView+Toast.h"
 
+
+#pragma mark ----百度地图key----
+#define baiduKey @"0Luu9sKDMqjqKX6efVSAzQy4"
 #pragma mark -----屏幕-----
 #define kWidth [UIScreen mainScreen].bounds.size.width
 #define kHeight [UIScreen mainScreen].bounds.size.height

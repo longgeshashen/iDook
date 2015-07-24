@@ -11,7 +11,7 @@
 		B25E2F2A1B59F93100F48886 /* DKActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B25E2F281B59F93100F48886 /* DKActivityTableViewCell.xib */; };
 		B27F53471B58A33E00D8D44C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F53461B58A33E00D8D44C /* main.m */; };
 		B27F534A1B58A33E00D8D44C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F53491B58A33E00D8D44C /* AppDelegate.m */; };
-		B27F534D1B58A33E00D8D44C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F534C1B58A33E00D8D44C /* ViewController.m */; };
+		B27F534D1B58A33E00D8D44C /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = B27F534C1B58A33E00D8D44C /* ViewController.mm */; };
 		B27F53501B58A33E00D8D44C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27F534E1B58A33E00D8D44C /* Main.storyboard */; };
 		B27F53521B58A33E00D8D44C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B27F53511B58A33E00D8D44C /* Images.xcassets */; };
 		B27F53551B58A33E00D8D44C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B27F53531B58A33E00D8D44C /* LaunchScreen.xib */; };
@@ -38,6 +38,29 @@
 		B2CEC5B81B5DCF9400FF19E4 /* DKCreateActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2CEC5B61B5DCF9400FF19E4 /* DKCreateActivityViewController.xib */; };
 		B2CEC5BC1B5DF00200FF19E4 /* EScrollerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CEC5BB1B5DF00200FF19E4 /* EScrollerView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B2CEC5BF1B5DF0B100FF19E4 /* DkAddImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CEC5BE1B5DF0B100FF19E4 /* DkAddImageView.m */; };
+		B2E887CA1B61EB4900B8FF26 /* BaiduMapAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E887C91B61EB4900B8FF26 /* BaiduMapAPI.framework */; };
+		B2E887D71B61ECDD00B8FF26 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E887CB1B61EC2600B8FF26 /* CoreLocation.framework */; };
+		B2E887D81B61ECE800B8FF26 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E887CD1B61EC2F00B8FF26 /* QuartzCore.framework */; };
+		B2E887D91B61ECEF00B8FF26 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E887CF1B61EC3600B8FF26 /* OpenGLES.framework */; };
+		B2E887DA1B61ECFB00B8FF26 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E887D11B61EC4800B8FF26 /* SystemConfiguration.framework */; };
+		B2E887DB1B61ED0500B8FF26 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E887D31B61EC5300B8FF26 /* CoreGraphics.framework */; };
+		B2E887DC1B61ED0C00B8FF26 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E887D51B61EC6000B8FF26 /* Security.framework */; };
+		B2E887DE1B61EE3C00B8FF26 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B2E887DD1B61EE3C00B8FF26 /* mapapi.bundle */; };
+		B2E887E71B6201A100B8FF26 /* DKShowlocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E887E51B6201A100B8FF26 /* DKShowlocationViewController.m */; };
+		B2E887E81B6201A100B8FF26 /* DKShowlocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2E887E61B6201A100B8FF26 /* DKShowlocationViewController.xib */; };
+		B2E887EE1B623A1200B8FF26 /* LCVoice.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E887EB1B623A1200B8FF26 /* LCVoice.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B2E887EF1B623A1200B8FF26 /* LCVoiceHud.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E887ED1B623A1200B8FF26 /* LCVoiceHud.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B2E887F41B623A7F00B8FF26 /* black_bg_ip5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2E887F01B623A7F00B8FF26 /* black_bg_ip5@2x.png */; };
+		B2E887F51B623A7F00B8FF26 /* mic_normal_358x358@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2E887F11B623A7F00B8FF26 /* mic_normal_358x358@2x.png */; };
+		B2E887F61B623A7F00B8FF26 /* mic_talk_358x358@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2E887F21B623A7F00B8FF26 /* mic_talk_358x358@2x.png */; };
+		B2E887F71B623A7F00B8FF26 /* wave70x117@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2E887F31B623A7F00B8FF26 /* wave70x117@2x.png */; };
+		B2E887F81B623A9F00B8FF26 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29810B21B60F1BE00DE374B /* AVFoundation.framework */; };
+		B2E887FA1B623AAD00B8FF26 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E887F91B623AAD00B8FF26 /* UIKit.framework */; };
+		B2E887FC1B623ABB00B8FF26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E887FB1B623ABB00B8FF26 /* Foundation.framework */; };
+		B2E888001B623B3400B8FF26 /* DKAudioRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E887FE1B623B3400B8FF26 /* DKAudioRecordViewController.m */; };
+		B2E888011B623B3400B8FF26 /* DKAudioRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2E887FF1B623B3400B8FF26 /* DKAudioRecordViewController.xib */; };
+		B2E888031B62466100B8FF26 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E888021B62466100B8FF26 /* AudioToolbox.framework */; };
+		B2E888051B62515C00B8FF26 /* MySound.caf in Resources */ = {isa = PBXBuildFile; fileRef = B2E888041B62515C00B8FF26 /* MySound.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +83,7 @@
 		B27F53481B58A33E00D8D44C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B27F53491B58A33E00D8D44C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B27F534B1B58A33E00D8D44C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B27F534C1B58A33E00D8D44C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B27F534C1B58A33E00D8D44C /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		B27F534F1B58A33E00D8D44C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B27F53511B58A33E00D8D44C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B27F53541B58A33E00D8D44C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -108,6 +131,32 @@
 		B2CEC5BB1B5DF00200FF19E4 /* EScrollerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EScrollerView.m; sourceTree = "<group>"; };
 		B2CEC5BD1B5DF0B100FF19E4 /* DkAddImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DkAddImageView.h; sourceTree = "<group>"; };
 		B2CEC5BE1B5DF0B100FF19E4 /* DkAddImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DkAddImageView.m; sourceTree = "<group>"; };
+		B2E887C91B61EB4900B8FF26 /* BaiduMapAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI.framework; sourceTree = "<group>"; };
+		B2E887CB1B61EC2600B8FF26 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B2E887CD1B61EC2F00B8FF26 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B2E887CF1B61EC3600B8FF26 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		B2E887D11B61EC4800B8FF26 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B2E887D31B61EC5300B8FF26 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B2E887D51B61EC6000B8FF26 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B2E887DD1B61EE3C00B8FF26 /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = mapapi.bundle; sourceTree = "<group>"; };
+		B2E887E41B6201A100B8FF26 /* DKShowlocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKShowlocationViewController.h; sourceTree = "<group>"; };
+		B2E887E51B6201A100B8FF26 /* DKShowlocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKShowlocationViewController.m; sourceTree = "<group>"; };
+		B2E887E61B6201A100B8FF26 /* DKShowlocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DKShowlocationViewController.xib; sourceTree = "<group>"; };
+		B2E887EA1B623A1200B8FF26 /* LCVoice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCVoice.h; sourceTree = "<group>"; };
+		B2E887EB1B623A1200B8FF26 /* LCVoice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCVoice.m; sourceTree = "<group>"; };
+		B2E887EC1B623A1200B8FF26 /* LCVoiceHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCVoiceHud.h; sourceTree = "<group>"; };
+		B2E887ED1B623A1200B8FF26 /* LCVoiceHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCVoiceHud.m; sourceTree = "<group>"; };
+		B2E887F01B623A7F00B8FF26 /* black_bg_ip5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black_bg_ip5@2x.png"; sourceTree = "<group>"; };
+		B2E887F11B623A7F00B8FF26 /* mic_normal_358x358@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mic_normal_358x358@2x.png"; sourceTree = "<group>"; };
+		B2E887F21B623A7F00B8FF26 /* mic_talk_358x358@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mic_talk_358x358@2x.png"; sourceTree = "<group>"; };
+		B2E887F31B623A7F00B8FF26 /* wave70x117@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wave70x117@2x.png"; sourceTree = "<group>"; };
+		B2E887F91B623AAD00B8FF26 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B2E887FB1B623ABB00B8FF26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B2E887FD1B623B3400B8FF26 /* DKAudioRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKAudioRecordViewController.h; sourceTree = "<group>"; };
+		B2E887FE1B623B3400B8FF26 /* DKAudioRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKAudioRecordViewController.m; sourceTree = "<group>"; };
+		B2E887FF1B623B3400B8FF26 /* DKAudioRecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DKAudioRecordViewController.xib; sourceTree = "<group>"; };
+		B2E888021B62466100B8FF26 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B2E888041B62515C00B8FF26 /* MySound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MySound.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +164,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2E888031B62466100B8FF26 /* AudioToolbox.framework in Frameworks */,
+				B2E887FC1B623ABB00B8FF26 /* Foundation.framework in Frameworks */,
+				B2E887FA1B623AAD00B8FF26 /* UIKit.framework in Frameworks */,
+				B2E887F81B623A9F00B8FF26 /* AVFoundation.framework in Frameworks */,
+				B2E887DC1B61ED0C00B8FF26 /* Security.framework in Frameworks */,
+				B2E887DB1B61ED0500B8FF26 /* CoreGraphics.framework in Frameworks */,
+				B2E887DA1B61ECFB00B8FF26 /* SystemConfiguration.framework in Frameworks */,
+				B2E887D91B61ECEF00B8FF26 /* OpenGLES.framework in Frameworks */,
+				B2E887D81B61ECE800B8FF26 /* QuartzCore.framework in Frameworks */,
+				B2E887D71B61ECDD00B8FF26 /* CoreLocation.framework in Frameworks */,
+				B2E887CA1B61EB4900B8FF26 /* BaiduMapAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +191,7 @@
 		B27F53381B58A33E00D8D44C = {
 			isa = PBXGroup;
 			children = (
-				B29810B21B60F1BE00DE374B /* AVFoundation.framework */,
+				B2E887C81B61EB0A00B8FF26 /* Frameworks */,
 				B27F53431B58A33E00D8D44C /* iDook */,
 				B27F535D1B58A33E00D8D44C /* iDookTests */,
 				B27F53421B58A33E00D8D44C /* Products */,
@@ -159,7 +219,7 @@
 				B27F53481B58A33E00D8D44C /* AppDelegate.h */,
 				B27F53491B58A33E00D8D44C /* AppDelegate.m */,
 				B27F534B1B58A33E00D8D44C /* ViewController.h */,
-				B27F534C1B58A33E00D8D44C /* ViewController.m */,
+				B27F534C1B58A33E00D8D44C /* ViewController.mm */,
 				B27F53441B58A33E00D8D44C /* Supporting Files */,
 			);
 			path = iDook;
@@ -168,6 +228,7 @@
 		B27F53441B58A33E00D8D44C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B2E888041B62515C00B8FF26 /* MySound.caf */,
 				B29810A21B60927C00DE374B /* createImage.jpg */,
 				B27F534E1B58A33E00D8D44C /* Main.storyboard */,
 				B27F53531B58A33E00D8D44C /* LaunchScreen.xib */,
@@ -232,6 +293,12 @@
 				B2CEC5BE1B5DF0B100FF19E4 /* DkAddImageView.m */,
 				B29810B41B60F31600DE374B /* DKShowBigImageViewController.h */,
 				B29810B51B60F31600DE374B /* DKShowBigImageViewController.m */,
+				B2E887E41B6201A100B8FF26 /* DKShowlocationViewController.h */,
+				B2E887E51B6201A100B8FF26 /* DKShowlocationViewController.m */,
+				B2E887E61B6201A100B8FF26 /* DKShowlocationViewController.xib */,
+				B2E887FD1B623B3400B8FF26 /* DKAudioRecordViewController.h */,
+				B2E887FE1B623B3400B8FF26 /* DKAudioRecordViewController.m */,
+				B2E887FF1B623B3400B8FF26 /* DKAudioRecordViewController.xib */,
 			);
 			path = iDookActivity;
 			sourceTree = "<group>";
@@ -259,6 +326,7 @@
 		B27F53A21B58E30A00D8D44C /* ThirdFrameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B2E887E91B6239FD00B8FF26 /* AudioRecord */,
 				B29810A81B60C55B00DE374B /* GetImage */,
 				B29810A41B60BF9E00DE374B /* UIView+Toast */,
 				B2CEC5B91B5DEFF500FF19E4 /* ScrollView */,
@@ -309,6 +377,41 @@
 				B2CEC5BB1B5DF00200FF19E4 /* EScrollerView.m */,
 			);
 			path = ScrollView;
+			sourceTree = "<group>";
+		};
+		B2E887C81B61EB0A00B8FF26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2E888021B62466100B8FF26 /* AudioToolbox.framework */,
+				B2E887FB1B623ABB00B8FF26 /* Foundation.framework */,
+				B2E887F91B623AAD00B8FF26 /* UIKit.framework */,
+				B2E887DD1B61EE3C00B8FF26 /* mapapi.bundle */,
+				B2E887D51B61EC6000B8FF26 /* Security.framework */,
+				B2E887D31B61EC5300B8FF26 /* CoreGraphics.framework */,
+				B2E887D11B61EC4800B8FF26 /* SystemConfiguration.framework */,
+				B2E887CF1B61EC3600B8FF26 /* OpenGLES.framework */,
+				B2E887CD1B61EC2F00B8FF26 /* QuartzCore.framework */,
+				B2E887CB1B61EC2600B8FF26 /* CoreLocation.framework */,
+				B2E887C91B61EB4900B8FF26 /* BaiduMapAPI.framework */,
+				B29810B21B60F1BE00DE374B /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			path = iDook/Frameworks;
+			sourceTree = "<group>";
+		};
+		B2E887E91B6239FD00B8FF26 /* AudioRecord */ = {
+			isa = PBXGroup;
+			children = (
+				B2E887F01B623A7F00B8FF26 /* black_bg_ip5@2x.png */,
+				B2E887F11B623A7F00B8FF26 /* mic_normal_358x358@2x.png */,
+				B2E887F21B623A7F00B8FF26 /* mic_talk_358x358@2x.png */,
+				B2E887F31B623A7F00B8FF26 /* wave70x117@2x.png */,
+				B2E887EA1B623A1200B8FF26 /* LCVoice.h */,
+				B2E887EB1B623A1200B8FF26 /* LCVoice.m */,
+				B2E887EC1B623A1200B8FF26 /* LCVoiceHud.h */,
+				B2E887ED1B623A1200B8FF26 /* LCVoiceHud.m */,
+			);
+			path = AudioRecord;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,7 +495,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2E887E81B6201A100B8FF26 /* DKShowlocationViewController.xib in Resources */,
+				B2E887F61B623A7F00B8FF26 /* mic_talk_358x358@2x.png in Resources */,
 				B27F53A11B58DEDB00D8D44C /* DkMineViewController.xib in Resources */,
+				B2E887F51B623A7F00B8FF26 /* mic_normal_358x358@2x.png in Resources */,
+				B2E887F71B623A7F00B8FF26 /* wave70x117@2x.png in Resources */,
+				B2E888051B62515C00B8FF26 /* MySound.caf in Resources */,
+				B2E887DE1B61EE3C00B8FF26 /* mapapi.bundle in Resources */,
 				B27F53971B58DEA100D8D44C /* DkActivityViewController.xib in Resources */,
 				B2CEC5B81B5DCF9400FF19E4 /* DKCreateActivityViewController.xib in Resources */,
 				B27F53501B58A33E00D8D44C /* Main.storyboard in Resources */,
@@ -400,7 +509,9 @@
 				B27F53551B58A33E00D8D44C /* LaunchScreen.xib in Resources */,
 				B27F53521B58A33E00D8D44C /* Images.xcassets in Resources */,
 				B25E2F2A1B59F93100F48886 /* DKActivityTableViewCell.xib in Resources */,
+				B2E887F41B623A7F00B8FF26 /* black_bg_ip5@2x.png in Resources */,
 				B29810A31B60927C00DE374B /* createImage.jpg in Resources */,
+				B2E888011B623B3400B8FF26 /* DKAudioRecordViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,10 +536,13 @@
 				B29810AD1B60C56B00DE374B /* CTAssetsPickerController.m in Sources */,
 				B27F53A91B58E73100D8D44C /* Tools.m in Sources */,
 				B27F53961B58DEA100D8D44C /* DkActivityViewController.m in Sources */,
-				B27F534D1B58A33E00D8D44C /* ViewController.m in Sources */,
+				B2E887E71B6201A100B8FF26 /* DKShowlocationViewController.m in Sources */,
+				B2E887EE1B623A1200B8FF26 /* LCVoice.m in Sources */,
+				B27F534D1B58A33E00D8D44C /* ViewController.mm in Sources */,
 				B2CEC5BC1B5DF00200FF19E4 /* EScrollerView.m in Sources */,
 				B27F539B1B58DECB00D8D44C /* DKAddressListViewController.m in Sources */,
 				B29810B11B60CBA800DE374B /* NSDate+TimeInterval.m in Sources */,
+				B2E888001B623B3400B8FF26 /* DKAudioRecordViewController.m in Sources */,
 				B29810A71B60BFAB00DE374B /* UIView+Toast.m in Sources */,
 				B27F534A1B58A33E00D8D44C /* AppDelegate.m in Sources */,
 				B27F53BE1B59070500D8D44C /* DKDynamic.m in Sources */,
@@ -437,6 +551,7 @@
 				B27F53861B58DB8B00D8D44C /* DKBaseNavigationViewController.m in Sources */,
 				B29810B61B60F31600DE374B /* DKShowBigImageViewController.m in Sources */,
 				B27F53AF1B58E83400D8D44C /* SSKeychain.m in Sources */,
+				B2E887EF1B623A1200B8FF26 /* LCVoiceHud.m in Sources */,
 				B27F538C1B58DC5800D8D44C /* DKBaseViewController.m in Sources */,
 				B27F53A51B58E33400D8D44C /* UITabBarItem+Universal.m in Sources */,
 			);
@@ -572,9 +687,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Xin Meng (GPHTA7398D)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iDook/Frameworks",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iDook/iDookPCH.pch";
 				INFOPLIST_FILE = iDook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "97b0ca88-6b7d-4e42-adc8-e561cedcfeb4";
 			};
@@ -586,9 +706,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Xin Meng (GPHTA7398D)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iDook/Frameworks",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iDook/iDookPCH.pch";
 				INFOPLIST_FILE = iDook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "97b0ca88-6b7d-4e42-adc8-e561cedcfeb4";
 			};

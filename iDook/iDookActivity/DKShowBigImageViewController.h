@@ -12,4 +12,5 @@
 
 @property (nonatomic,retain) UIScrollView *scrollView;//滚动视图
 @property (nonatomic,retain) NSArray *imageArray;//图片数组
+
 @end

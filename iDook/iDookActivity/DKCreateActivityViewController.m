@@ -11,6 +11,12 @@
 #import "CTAssetsPickerController.h"
 #import "PhotoPickerController.h"
 #import "Tools.h"
+#import "DKShowlocationViewController.h"
+#import "DKBaseNavigationViewController.h"
+#import "DKAudioRecordViewController.h"
+#import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
+
 @interface DKCreateActivityViewController ()
 {
     UILabel *titleLabel;    //标题
@@ -22,6 +28,12 @@
     PhotoPickerController *photoPicker;//
     NSMutableArray *dataArray;     //图片数组
     DkAddImageView *dkAddimage;    //加载图片
+    
+    UILabel *locationLabelDetial;       //显示位置的lab
+    UIButton *deleteLocationBtn;  //删除位置的btn
+    UIButton *deleteAudioBtn;  //删除位置的btn
+    UIButton *playAudioBtn;  //播放语音
+    NSString *playAudioPath;
 }
 
 @end
@@ -31,6 +43,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"发布图文";
     [self loadMyViews];
     [self loadMyData];
 }
@@ -103,6 +116,16 @@
 #pragma mark - 底部按钮操作
 - (void)tapButton:(UIButton*)sender{
     debugLog(@"点击%ld",(long)sender.tag);
+    if(sender.tag==11){
+        [self.navigationController popViewControllerAnimated:YES];
+    }else if (sender.tag==12){
+        //发表
+        [self publishNewActivity];
+    }
+}
+#pragma mark - 发表新的活动
+- (void)publishNewActivity{
+    
 }
 #pragma mark - UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -149,9 +172,7 @@
             if (indexPath.row==0) {
                 [cell.contentView addSubview:myTextView];
                 [cell.contentView addSubview:overLab];
-//                if (dkAddimage) {
-//                    dkAddimage = nil;
-//                }
+
                 dkAddimage = [[DkAddImageView alloc] initWithFrame:CGRectMake(15, 120, kWidth-30, 100)];
                 dkAddimage.deleget = self;
                 [dkAddimage loadscrollViewWithImages:dataArray andTitles:nil];
@@ -166,6 +187,20 @@
                 UILabel *locationLabel = [[UILabel alloc] initWithFrame:CGRectMake(35, 20, 80, 30)];
                 locationLabel.text = @"显示位置";
                 [cell.contentView addSubview:locationLabel];
+                //
+                locationLabelDetial = [[UILabel alloc] initWithFrame:CGRectMake(120, 10, kWidth-160, 50)];
+                locationLabelDetial.text = @"";
+                locationLabelDetial.textColor = colorLightGray;
+                locationLabelDetial.font = [UIFont systemFontOfSize:11];
+                locationLabelDetial.numberOfLines = 0;
+                [cell.contentView addSubview:locationLabelDetial];
+                //
+                deleteLocationBtn = [[UIButton alloc] initWithFrame:CGRectMake(kWidth-45, 20, 30, 30)];
+                [deleteLocationBtn setBackgroundImage:[UIImage imageNamed:@"icon-activity-1"] forState:UIControlStateNormal];
+                deleteLocationBtn.tag = 20;
+                [deleteLocationBtn addTarget:self action:@selector(deleteLocationOrAudio:) forControlEvents:UIControlEventTouchUpInside];
+                deleteLocationBtn.hidden = YES;
+                [cell.contentView addSubview:deleteLocationBtn];
             }
             
             
@@ -182,8 +217,24 @@
             audioLabel.text = @"语音";
             [cell.contentView addSubview:audioLabel];
             //
-            //                UILabel *audioDetial
-            
+            UILabel *audioLa = [[UILabel alloc] initWithFrame:CGRectMake(kWidth-150, 20, 130, 30)];
+            audioLa.textColor = colorLightGray;
+            audioLa.text = @"点击开始录音";
+            audioLa.hidden = NO;
+            [cell.contentView addSubview:audioLa];
+            //
+            playAudioBtn = [[UIButton alloc] initWithFrame:CGRectMake(kWidth-150, 20, 130, 30)];
+            playAudioBtn.backgroundColor = [UIColor greenColor];
+            [playAudioBtn addTarget:self action:@selector(playAudio:) forControlEvents:UIControlEventTouchUpInside];
+            playAudioBtn.hidden = YES;
+            [cell.contentView addSubview:playAudioBtn];
+            //
+            deleteAudioBtn = [[UIButton alloc] initWithFrame:CGRectMake(kWidth-45, 20, 30, 30)];
+            [deleteAudioBtn setBackgroundImage:[UIImage imageNamed:@"icon-activity-1"] forState:UIControlStateNormal];
+            deleteAudioBtn.tag = 21;
+            [deleteAudioBtn addTarget:self action:@selector(deleteLocationOrAudio:) forControlEvents:UIControlEventTouchUpInside];
+            deleteAudioBtn.hidden = YES;
+            [cell.contentView addSubview:deleteAudioBtn];
         }
             break;
         case 2:
@@ -208,6 +259,25 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     debugLog(@"%ld",(long)indexPath.row);
+    if (indexPath.section==0) {
+        if (indexPath.row==1) {
+            debugLog(@"显示位置");
+            DKShowlocationViewController *showLocationv = [[DKShowlocationViewController alloc] init];
+            showLocationv.delegate = self;
+            DKBaseNavigationViewController *nav = [[DKBaseNavigationViewController alloc] initWithRootViewController:showLocationv];
+            
+            [self presentViewController:nav animated:YES completion:^{
+                //
+            }];
+        }
+    }else if (indexPath.section==1){
+        DKAudioRecordViewController *audioV = [[DKAudioRecordViewController alloc] init];
+        audioV.delegate = self;
+        DKBaseNavigationViewController *nav = [[DKBaseNavigationViewController alloc] initWithRootViewController:audioV];
+        [self presentViewController:nav animated:YES completion:^{
+            //
+        }];
+    }
 }
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -356,5 +426,51 @@
 }
 
 - (void)photoPickerControllerCancel:(PhotoPickerController *)controller {
+}
+#pragma mark - ----------------------
+#pragma mark - 删除位置或语音
+- (void)deleteLocationOrAudio:(UIButton *)sender{
+    if (sender.tag==20) {
+        locationLabelDetial.text = @"";
+        deleteLocationBtn.hidden = YES;
+    }else if (sender.tag==21){
+        
+    }
+}
+#pragma mark - 地图定位代理回调
+- (void)getMylocation:(NSString *)myLocation{
+    locationLabelDetial.text = myLocation;
+    deleteLocationBtn.hidden = NO;
+}
+#pragma mark - 播放语音
+- (void)playAudio:(UIButton*)sender{
+    debugLog(@"播放语音");
+    if (self.avPlay.playing) {
+        [self.avPlay stop];
+        return;
+    }
+//    NSURL *audioUrl=[[NSURL alloc] initFileURLWithPath:playAudioPath];
+////    NSData *audioData = [[NSData alloc] initWithContentsOfFile:playAudioPath];
+//    AVAudioPlayer *player = [[AVAudioPlayer alloc]initWithContentsOfURL:audioUrl error:nil];
+////    AVAudioPlayer *player = [[AVAudioPlayer alloc]initWithData:audioData error:nil];
+//    self.avPlay = player;
+//    [self.avPlay play];
+    NSString *soundPath=[[NSBundle mainBundle] pathForResource:@"MySound" ofType:@"caf"];
+    NSURL *soundUrl=[[NSURL alloc] initFileURLWithPath:soundPath];
+    AVAudioPlayer *player=[[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    [player prepareToPlay];
+    
+    self.avPlay = player;
+    [self.avPlay play];
+    
+    
+    
+}
+#pragma mark - 录音回调
+- (void)getAudio:(NSString *)audioPath andAudioTime:(CGFloat)audiotime{
+    debugLog(@"语音路径是：%@/n语音时长%f",audioPath,audiotime);
+    playAudioPath = [[NSString alloc] initWithString:audioPath];
+    playAudioBtn.hidden = NO;
+    deleteAudioBtn.hidden = NO;
 }
 @end

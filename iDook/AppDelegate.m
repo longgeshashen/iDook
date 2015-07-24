@@ -10,8 +10,12 @@
 #import "DKBaseNavigationViewController.h"
 #import "UITabBarItem+Universal.h"
 #import "Tools.h"
-@interface AppDelegate ()
+#import <BaiduMapAPI/BMapKit.h>//引入所有的头文件
 
+@interface AppDelegate ()
+{
+    BMKMapManager* _mapManager;
+}
 @end
 
 @implementation AppDelegate
@@ -28,8 +32,8 @@
 
     NSArray *tabImage = @[@"btnav-act",@"btnav-mclass",@"btnav-my"];
     NSArray *tabImage_select = @[@"btnav-act2",@"btnav-mclass2",@"btnav-my2"];//这里可以不加选中变色的图片
-    NSArray *viewControllerArray=@[@"DkActivityViewController",@"DKAddressListViewController",@"DkMineViewController"];
-    NSArray *tabTitle=@[@"图文",@"线索",@"我的"];
+    NSArray *viewControllerArray=@[@"DKAddressListViewController",@"DkActivityViewController",@"DkMineViewController"];
+    NSArray *tabTitle=@[@"线索",@"图文",@"我的"];
     NSMutableArray *recordViewControllers=[[NSMutableArray alloc]initWithCapacity:0];
     for (unsigned i=0; i<[viewControllerArray count]; i++) {
         NSString *viewControllersString=[viewControllerArray objectAtIndex:i];
@@ -78,9 +82,14 @@
 //    else{
         self.window.rootViewController = DKTabBarController;
 //    }
+    //初始化百度地图服务
+    _mapManager = [[BMKMapManager alloc] init];
+    BOOL ret = [_mapManager start:baiduKey generalDelegate:nil];
+    if (!ret) {
+        debugLog(@"百度地图初始化失败");
+    }
+    
     [self.window makeKeyAndVisible];
-    
-    
     return YES;
 }
 #pragma mark -  自定义TabBar方法
@@ -91,6 +100,7 @@
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    [BMKMapView willBackGround];//当应用即将后台时调用，停止一切调用opengl相关的操作
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
@@ -104,6 +114,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [BMKMapView didForeGround];//当应用恢复前台状态时调用，回复地图的渲染和opengl相关的操作
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
