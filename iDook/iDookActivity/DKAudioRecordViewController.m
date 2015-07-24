@@ -59,7 +59,7 @@
 #pragma mark - 录音方法
 -(void) recordStart
 {
-    [self.voice startRecordWithPath:[NSString stringWithFormat:@"%@/Documents/Audio/MySound.caf", NSHomeDirectory()]];
+    [self.voice startRecordWithPath:[NSString stringWithFormat:@"%@/Documents/MySound.caf", NSHomeDirectory()]];
     
 }
 

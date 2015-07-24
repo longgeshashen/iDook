@@ -449,21 +449,10 @@
         [self.avPlay stop];
         return;
     }
-//    NSURL *audioUrl=[[NSURL alloc] initFileURLWithPath:playAudioPath];
-////    NSData *audioData = [[NSData alloc] initWithContentsOfFile:playAudioPath];
-//    AVAudioPlayer *player = [[AVAudioPlayer alloc]initWithContentsOfURL:audioUrl error:nil];
-////    AVAudioPlayer *player = [[AVAudioPlayer alloc]initWithData:audioData error:nil];
-//    self.avPlay = player;
-//    [self.avPlay play];
-    NSString *soundPath=[[NSBundle mainBundle] pathForResource:@"MySound" ofType:@"caf"];
-    NSURL *soundUrl=[[NSURL alloc] initFileURLWithPath:soundPath];
-    AVAudioPlayer *player=[[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
-    [player prepareToPlay];
-    
+    NSURL *audioUrl=[[NSURL alloc] initFileURLWithPath:playAudioPath];
+    AVAudioPlayer *player = [[AVAudioPlayer alloc]initWithContentsOfURL:audioUrl error:nil];
     self.avPlay = player;
     [self.avPlay play];
-    
-    
     
 }
 #pragma mark - 录音回调
