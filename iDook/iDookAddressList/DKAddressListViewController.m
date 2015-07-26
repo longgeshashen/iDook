@@ -7,7 +7,7 @@
 //
 
 #import "DKAddressListViewController.h"
-
+#import "DKAddressListCell.h"
 @interface DKAddressListViewController ()
 
 @end
@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     self.isBoot = YES;
     [super viewDidLoad];
-    NSLog(@"通讯录页面");
+    NSLog(@"线索页面");
     self.title = @"线索";
     [self loadMydata];
     [self loadMyView];
@@ -33,8 +33,8 @@
     
 }
 - (void)loadMyView{
-//    self.view.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1.0];
-    addresstableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 50, kWidth, kHeight) style:UITableViewStylePlain];
+    
+    addresstableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight) style:UITableViewStylePlain];
     addresstableView.delegate = self;
     addresstableView.dataSource = self;
     if ([addresstableView respondsToSelector:@selector(setSeparatorInset:)]) {
@@ -45,8 +45,21 @@
     }
 
     [self.view addSubview:addresstableView];
+    
+    //搜索按钮
+    UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightBtn.frame = CGRectMake(0, 0, 25, 25);
+    [rightBtn addTarget:self action:@selector(searchList) forControlEvents:UIControlEventTouchUpInside];
+    [rightBtn setBackgroundImage:[UIImage imageNamed:@"iDook-searchBtn"] forState:UIControlStateNormal];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
+    self.navigationItem.rightBarButtonItem = rightItem;
+    
 }
+#pragma mark - 进入搜索页面
+- (void)searchList{
+    debugLog(@"搜素线索");
 
+}
 
 #pragma mark - UiTableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -58,12 +71,19 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 80;
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 5.0;
+}
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *Cell = @"addresscell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Cell];
     if (cell==nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Cell];
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Cell];
+        DKAddressListCell *dkcell = [[[NSBundle mainBundle] loadNibNamed:@"DKAddressListCell" owner:self options:nil] lastObject];
+        [dkcell loadAddressListCellWithDictionary:nil];
+        cell = dkcell;
     }
+    
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }

@@ -66,7 +66,7 @@
             UITextAttributeTextColor: [UIColor darkGrayColor],UITextAttributeFont:[UIFont systemFontOfSize:13 weight:1.0]} forState:UIControlStateNormal];
 
     }
-    
+    [DKTabBarController.tabBar setBackgroundColor:[UIColor whiteColor]];
     [DKTabBarController.tabBar setSelectedImageTintColor:colorTabBar];
     [DKTabBarController setViewControllers:recordViewControllers animated:YES];
     [DKTabBarController setSelectedIndex:0];

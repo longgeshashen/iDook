@@ -61,6 +61,8 @@
 		B2E888011B623B3400B8FF26 /* DKAudioRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2E887FF1B623B3400B8FF26 /* DKAudioRecordViewController.xib */; };
 		B2E888031B62466100B8FF26 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E888021B62466100B8FF26 /* AudioToolbox.framework */; };
 		B2E888051B62515C00B8FF26 /* MySound.caf in Resources */ = {isa = PBXBuildFile; fileRef = B2E888041B62515C00B8FF26 /* MySound.caf */; };
+		FDF4C0281B64EF5B005DAF41 /* DKAddressListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF4C0261B64EF5B005DAF41 /* DKAddressListCell.m */; };
+		FDF4C0291B64EF5B005DAF41 /* DKAddressListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDF4C0271B64EF5B005DAF41 /* DKAddressListCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +159,9 @@
 		B2E887FF1B623B3400B8FF26 /* DKAudioRecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DKAudioRecordViewController.xib; sourceTree = "<group>"; };
 		B2E888021B62466100B8FF26 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		B2E888041B62515C00B8FF26 /* MySound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MySound.caf; sourceTree = "<group>"; };
+		FDF4C0251B64EF5B005DAF41 /* DKAddressListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKAddressListCell.h; sourceTree = "<group>"; };
+		FDF4C0261B64EF5B005DAF41 /* DKAddressListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKAddressListCell.m; sourceTree = "<group>"; };
+		FDF4C0271B64EF5B005DAF41 /* DKAddressListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DKAddressListCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +314,9 @@
 				B27F53981B58DECB00D8D44C /* DKAddressListViewController.h */,
 				B27F53991B58DECB00D8D44C /* DKAddressListViewController.m */,
 				B27F539A1B58DECB00D8D44C /* DKAddressListViewController.xib */,
+				FDF4C0251B64EF5B005DAF41 /* DKAddressListCell.h */,
+				FDF4C0261B64EF5B005DAF41 /* DKAddressListCell.m */,
+				FDF4C0271B64EF5B005DAF41 /* DKAddressListCell.xib */,
 			);
 			path = iDookAddressList;
 			sourceTree = "<group>";
@@ -500,6 +508,7 @@
 				B27F53A11B58DEDB00D8D44C /* DkMineViewController.xib in Resources */,
 				B2E887F51B623A7F00B8FF26 /* mic_normal_358x358@2x.png in Resources */,
 				B2E887F71B623A7F00B8FF26 /* wave70x117@2x.png in Resources */,
+				FDF4C0291B64EF5B005DAF41 /* DKAddressListCell.xib in Resources */,
 				B2E888051B62515C00B8FF26 /* MySound.caf in Resources */,
 				B2E887DE1B61EE3C00B8FF26 /* mapapi.bundle in Resources */,
 				B27F53971B58DEA100D8D44C /* DkActivityViewController.xib in Resources */,
@@ -534,6 +543,7 @@
 				B2CEC5BF1B5DF0B100FF19E4 /* DkAddImageView.m in Sources */,
 				B27F53A01B58DEDB00D8D44C /* DkMineViewController.m in Sources */,
 				B29810AD1B60C56B00DE374B /* CTAssetsPickerController.m in Sources */,
+				FDF4C0281B64EF5B005DAF41 /* DKAddressListCell.m in Sources */,
 				B27F53A91B58E73100D8D44C /* Tools.m in Sources */,
 				B27F53961B58DEA100D8D44C /* DkActivityViewController.m in Sources */,
 				B2E887E71B6201A100B8FF26 /* DKShowlocationViewController.m in Sources */,
