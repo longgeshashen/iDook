@@ -8,6 +8,8 @@
 
 #import "DKAddressListViewController.h"
 #import "DKAddressListCell.h"
+#import "DKListDetailViewController.h"
+
 @interface DKAddressListViewController ()
 
 @end
@@ -89,6 +91,10 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     debugLog(@"选中一个联系人查看详情");
+    // 选择一个人，查看详情
+    DKListDetailViewController *listDetail = [[DKListDetailViewController alloc] init];
+    listDetail.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:listDetail animated:YES];
 }
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {

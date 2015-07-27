@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B258A62E1B65C26300A71768 /* DKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B258A62C1B65C26300A71768 /* DKLoginViewController.m */; };
+		B258A62F1B65C26300A71768 /* DKLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B258A62D1B65C26300A71768 /* DKLoginViewController.xib */; };
+		B258A6331B65C3B800A71768 /* DKListDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B258A6311B65C3B800A71768 /* DKListDetailViewController.m */; };
+		B258A6341B65C3B800A71768 /* DKListDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B258A6321B65C3B800A71768 /* DKListDetailViewController.xib */; };
+		B258A6381B65D61300A71768 /* DKActivityShareSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B258A6361B65D61300A71768 /* DKActivityShareSettingViewController.m */; };
+		B258A6391B65D61300A71768 /* DKActivityShareSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B258A6371B65D61300A71768 /* DKActivityShareSettingViewController.xib */; };
+		B258A63F1B6639B000A71768 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B258A63B1B6639B000A71768 /* libWeChatSDK.a */; };
+		B258A6401B6639B000A71768 /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = B258A63C1B6639B000A71768 /* read_me.txt */; };
+		B258A6421B6639EE00A71768 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B258A6411B6639EE00A71768 /* libz.dylib */; };
+		B258A6441B6639F800A71768 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B258A6431B6639F800A71768 /* libsqlite3.0.dylib */; };
 		B25E2F291B59F93100F48886 /* DKActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B25E2F271B59F93100F48886 /* DKActivityTableViewCell.m */; };
 		B25E2F2A1B59F93100F48886 /* DKActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B25E2F281B59F93100F48886 /* DKActivityTableViewCell.xib */; };
 		B27F53471B58A33E00D8D44C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F53461B58A33E00D8D44C /* main.m */; };
@@ -76,6 +86,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B258A62B1B65C26300A71768 /* DKLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKLoginViewController.h; sourceTree = "<group>"; };
+		B258A62C1B65C26300A71768 /* DKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKLoginViewController.m; sourceTree = "<group>"; };
+		B258A62D1B65C26300A71768 /* DKLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DKLoginViewController.xib; sourceTree = "<group>"; };
+		B258A6301B65C3B800A71768 /* DKListDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKListDetailViewController.h; sourceTree = "<group>"; };
+		B258A6311B65C3B800A71768 /* DKListDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKListDetailViewController.m; sourceTree = "<group>"; };
+		B258A6321B65C3B800A71768 /* DKListDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DKListDetailViewController.xib; sourceTree = "<group>"; };
+		B258A6351B65D61300A71768 /* DKActivityShareSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKActivityShareSettingViewController.h; sourceTree = "<group>"; };
+		B258A6361B65D61300A71768 /* DKActivityShareSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKActivityShareSettingViewController.m; sourceTree = "<group>"; };
+		B258A6371B65D61300A71768 /* DKActivityShareSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DKActivityShareSettingViewController.xib; sourceTree = "<group>"; };
+		B258A63B1B6639B000A71768 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		B258A63C1B6639B000A71768 /* read_me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read_me.txt; sourceTree = "<group>"; };
+		B258A63D1B6639B000A71768 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		B258A63E1B6639B000A71768 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		B258A6411B6639EE00A71768 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		B258A6431B6639F800A71768 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		B25E2F261B59F93100F48886 /* DKActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKActivityTableViewCell.h; sourceTree = "<group>"; };
 		B25E2F271B59F93100F48886 /* DKActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKActivityTableViewCell.m; sourceTree = "<group>"; };
 		B25E2F281B59F93100F48886 /* DKActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DKActivityTableViewCell.xib; sourceTree = "<group>"; };
@@ -169,8 +194,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B258A6441B6639F800A71768 /* libsqlite3.0.dylib in Frameworks */,
+				B258A6421B6639EE00A71768 /* libz.dylib in Frameworks */,
 				B2E888031B62466100B8FF26 /* AudioToolbox.framework in Frameworks */,
 				B2E887FC1B623ABB00B8FF26 /* Foundation.framework in Frameworks */,
+				B258A63F1B6639B000A71768 /* libWeChatSDK.a in Frameworks */,
 				B2E887FA1B623AAD00B8FF26 /* UIKit.framework in Frameworks */,
 				B2E887F81B623A9F00B8FF26 /* AVFoundation.framework in Frameworks */,
 				B2E887DC1B61ED0C00B8FF26 /* Security.framework in Frameworks */,
@@ -193,6 +221,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B258A63A1B66396F00A71768 /* WeiChat */ = {
+			isa = PBXGroup;
+			children = (
+				B258A63B1B6639B000A71768 /* libWeChatSDK.a */,
+				B258A63C1B6639B000A71768 /* read_me.txt */,
+				B258A63D1B6639B000A71768 /* WXApi.h */,
+				B258A63E1B6639B000A71768 /* WXApiObject.h */,
+			);
+			path = WeiChat;
+			sourceTree = "<group>";
+		};
 		B27F53381B58A33E00D8D44C = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +264,9 @@
 				B27F53491B58A33E00D8D44C /* AppDelegate.m */,
 				B27F534B1B58A33E00D8D44C /* ViewController.h */,
 				B27F534C1B58A33E00D8D44C /* ViewController.mm */,
+				B258A62B1B65C26300A71768 /* DKLoginViewController.h */,
+				B258A62C1B65C26300A71768 /* DKLoginViewController.m */,
+				B258A62D1B65C26300A71768 /* DKLoginViewController.xib */,
 				B27F53441B58A33E00D8D44C /* Supporting Files */,
 			);
 			path = iDook;
@@ -304,6 +346,9 @@
 				B2E887FD1B623B3400B8FF26 /* DKAudioRecordViewController.h */,
 				B2E887FE1B623B3400B8FF26 /* DKAudioRecordViewController.m */,
 				B2E887FF1B623B3400B8FF26 /* DKAudioRecordViewController.xib */,
+				B258A6351B65D61300A71768 /* DKActivityShareSettingViewController.h */,
+				B258A6361B65D61300A71768 /* DKActivityShareSettingViewController.m */,
+				B258A6371B65D61300A71768 /* DKActivityShareSettingViewController.xib */,
 			);
 			path = iDookActivity;
 			sourceTree = "<group>";
@@ -317,6 +362,9 @@
 				FDF4C0251B64EF5B005DAF41 /* DKAddressListCell.h */,
 				FDF4C0261B64EF5B005DAF41 /* DKAddressListCell.m */,
 				FDF4C0271B64EF5B005DAF41 /* DKAddressListCell.xib */,
+				B258A6301B65C3B800A71768 /* DKListDetailViewController.h */,
+				B258A6311B65C3B800A71768 /* DKListDetailViewController.m */,
+				B258A6321B65C3B800A71768 /* DKListDetailViewController.xib */,
 			);
 			path = iDookAddressList;
 			sourceTree = "<group>";
@@ -334,6 +382,7 @@
 		B27F53A21B58E30A00D8D44C /* ThirdFrameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B258A63A1B66396F00A71768 /* WeiChat */,
 				B2E887E91B6239FD00B8FF26 /* AudioRecord */,
 				B29810A81B60C55B00DE374B /* GetImage */,
 				B29810A41B60BF9E00DE374B /* UIView+Toast */,
@@ -390,6 +439,8 @@
 		B2E887C81B61EB0A00B8FF26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B258A6431B6639F800A71768 /* libsqlite3.0.dylib */,
+				B258A6411B6639EE00A71768 /* libz.dylib */,
 				B2E888021B62466100B8FF26 /* AudioToolbox.framework */,
 				B2E887FB1B623ABB00B8FF26 /* Foundation.framework */,
 				B2E887F91B623AAD00B8FF26 /* UIKit.framework */,
@@ -503,12 +554,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B258A6341B65C3B800A71768 /* DKListDetailViewController.xib in Resources */,
 				B2E887E81B6201A100B8FF26 /* DKShowlocationViewController.xib in Resources */,
 				B2E887F61B623A7F00B8FF26 /* mic_talk_358x358@2x.png in Resources */,
 				B27F53A11B58DEDB00D8D44C /* DkMineViewController.xib in Resources */,
 				B2E887F51B623A7F00B8FF26 /* mic_normal_358x358@2x.png in Resources */,
+				B258A6391B65D61300A71768 /* DKActivityShareSettingViewController.xib in Resources */,
 				B2E887F71B623A7F00B8FF26 /* wave70x117@2x.png in Resources */,
 				FDF4C0291B64EF5B005DAF41 /* DKAddressListCell.xib in Resources */,
+				B258A6401B6639B000A71768 /* read_me.txt in Resources */,
 				B2E888051B62515C00B8FF26 /* MySound.caf in Resources */,
 				B2E887DE1B61EE3C00B8FF26 /* mapapi.bundle in Resources */,
 				B27F53971B58DEA100D8D44C /* DkActivityViewController.xib in Resources */,
@@ -521,6 +575,7 @@
 				B2E887F41B623A7F00B8FF26 /* black_bg_ip5@2x.png in Resources */,
 				B29810A31B60927C00DE374B /* createImage.jpg in Resources */,
 				B2E888011B623B3400B8FF26 /* DKAudioRecordViewController.xib in Resources */,
+				B258A62F1B65C26300A71768 /* DKLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,11 +601,14 @@
 				FDF4C0281B64EF5B005DAF41 /* DKAddressListCell.m in Sources */,
 				B27F53A91B58E73100D8D44C /* Tools.m in Sources */,
 				B27F53961B58DEA100D8D44C /* DkActivityViewController.m in Sources */,
+				B258A6331B65C3B800A71768 /* DKListDetailViewController.m in Sources */,
 				B2E887E71B6201A100B8FF26 /* DKShowlocationViewController.m in Sources */,
 				B2E887EE1B623A1200B8FF26 /* LCVoice.m in Sources */,
 				B27F534D1B58A33E00D8D44C /* ViewController.mm in Sources */,
 				B2CEC5BC1B5DF00200FF19E4 /* EScrollerView.m in Sources */,
 				B27F539B1B58DECB00D8D44C /* DKAddressListViewController.m in Sources */,
+				B258A6381B65D61300A71768 /* DKActivityShareSettingViewController.m in Sources */,
+				B258A62E1B65C26300A71768 /* DKLoginViewController.m in Sources */,
 				B29810B11B60CBA800DE374B /* NSDate+TimeInterval.m in Sources */,
 				B2E888001B623B3400B8FF26 /* DKAudioRecordViewController.m in Sources */,
 				B29810A71B60BFAB00DE374B /* UIView+Toast.m in Sources */,
@@ -704,6 +762,10 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iDook/iDookPCH.pch";
 				INFOPLIST_FILE = iDook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iDook/ThirdFrameworks/WeiChat",
+				);
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "97b0ca88-6b7d-4e42-adc8-e561cedcfeb4";
@@ -723,6 +785,10 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iDook/iDookPCH.pch";
 				INFOPLIST_FILE = iDook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iDook/ThirdFrameworks/WeiChat",
+				);
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "97b0ca88-6b7d-4e42-adc8-e561cedcfeb4";

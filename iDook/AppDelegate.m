@@ -88,6 +88,8 @@
     if (!ret) {
         debugLog(@"百度地图初始化失败");
     }
+    //微信注册
+    [WXApi registerApp:WXAppkey withDescription:@"iDook"];
     
     [self.window makeKeyAndVisible];
     return YES;
@@ -120,5 +122,16 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+#pragma mark - 引入微信SDK需重新方法
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return  [WXApi handleOpenURL:url delegate:self];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return  [WXApi handleOpenURL:url delegate:self];
+}
+
 
 @end

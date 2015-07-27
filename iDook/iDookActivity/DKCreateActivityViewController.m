@@ -16,6 +16,7 @@
 #import "DKAudioRecordViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import "DKActivityShareSettingViewController.h"
 
 @interface DKCreateActivityViewController ()
 {
@@ -46,8 +47,8 @@
     self.title = @"发布图文";
     [self loadMyViews];
     [self loadMyData];
+    
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -55,7 +56,6 @@
 - (void)loadMyData{
     
     photoPicker = [[PhotoPickerController alloc] initWithDelegate:self];
-    dataArray = [[NSMutableArray alloc] init];
     dataArray = [[NSMutableArray alloc] initWithCapacity:0];
 
 }
@@ -277,6 +277,13 @@
         [self presentViewController:nav animated:YES completion:^{
             //
         }];
+    }else if (indexPath.section==2){
+        DKActivityShareSettingViewController *shareV = [[DKActivityShareSettingViewController alloc] init];
+        [self.navigationController pushViewController:shareV animated:YES];
+//        DKBaseNavigationViewController *nav = [[DKBaseNavigationViewController alloc] initWithRootViewController:shareV];
+//        [self presentViewController:nav animated:YES completion:^{
+//            //
+//        }];
     }
 }
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -458,8 +465,11 @@
 #pragma mark - 录音回调
 - (void)getAudio:(NSString *)audioPath andAudioTime:(CGFloat)audiotime{
     debugLog(@"语音路径是：%@/n语音时长%f",audioPath,audiotime);
-    playAudioPath = [[NSString alloc] initWithString:audioPath];
-    playAudioBtn.hidden = NO;
-    deleteAudioBtn.hidden = NO;
+    if ([audioPath length]!=0) {
+        playAudioPath = [[NSString alloc] initWithString:audioPath];
+        playAudioBtn.hidden = NO;
+        deleteAudioBtn.hidden = NO;
+    }
+    
 }
 @end

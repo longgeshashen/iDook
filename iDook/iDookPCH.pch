@@ -16,6 +16,12 @@
 
 #pragma mark ----百度地图key----
 #define baiduKey @"0Luu9sKDMqjqKX6efVSAzQy4"
+
+#pragma mark ----微信key----
+#define WXAppkey @"wx28e55e2a700d3353"
+#define WXSecretKey @"f0d6dd65e755ea2cd2e6fc9c992e3d11"
+
+
 #pragma mark -----屏幕-----
 #define kWidth [UIScreen mainScreen].bounds.size.width
 #define kHeight [UIScreen mainScreen].bounds.size.height
@@ -42,6 +48,7 @@
 #define kIphone4  [UIScreen mainScreen].bounds.size.height == 480
 #define kIphone6  [UIScreen mainScreen].bounds.size.height == 667
 #define kIphone6plus [UIScreen mainScreen].bounds.size.height == 960
+#define topBarheight      ([[[UIDevice currentDevice] systemVersion] floatValue]>=7.0?64:44)                                                                      //状态栏和导航栏位置
 
 #define autoSizeScaleX kIphone6?1.171875:(kIphone6plus?1.29375:1)
 #define autoSizeScaleY kIphone6?1.17429577:(kIphone6plus?1.2957:1)

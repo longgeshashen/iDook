@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WXApi.h"
+#import "DKLoginViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate,UITabBarControllerDelegate>
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate,UITabBarControllerDelegate,WXApiDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UITabBarController *DKTabBarController;//主tabbar控制器
