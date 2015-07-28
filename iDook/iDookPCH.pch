@@ -53,4 +53,7 @@
 #define autoSizeScaleX kIphone6?1.171875:(kIphone6plus?1.29375:1)
 #define autoSizeScaleY kIphone6?1.17429577:(kIphone6plus?1.2957:1)
 
+#pragma mark ----App版本----
+#define myAPPVersion @"1.000000"  //版本号 1.0.0
+#define isLogin  //是否已经登录
 #endif

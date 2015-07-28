@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B255BFEA1B67257B00D46091 /* GuideVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B255BFE91B67257B00D46091 /* GuideVC.m */; };
 		B258A62E1B65C26300A71768 /* DKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B258A62C1B65C26300A71768 /* DKLoginViewController.m */; };
 		B258A62F1B65C26300A71768 /* DKLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B258A62D1B65C26300A71768 /* DKLoginViewController.xib */; };
 		B258A6331B65C3B800A71768 /* DKListDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B258A6311B65C3B800A71768 /* DKListDetailViewController.m */; };
@@ -86,9 +87,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B258A62B1B65C26300A71768 /* DKLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKLoginViewController.h; sourceTree = "<group>"; };
-		B258A62C1B65C26300A71768 /* DKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKLoginViewController.m; sourceTree = "<group>"; };
-		B258A62D1B65C26300A71768 /* DKLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DKLoginViewController.xib; sourceTree = "<group>"; };
+		B255BFE81B67257B00D46091 /* GuideVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideVC.h; sourceTree = "<group>"; };
+		B255BFE91B67257B00D46091 /* GuideVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideVC.m; sourceTree = "<group>"; };
+		B258A62B1B65C26300A71768 /* DKLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKLoginViewController.h; path = ../DKLoginViewController.h; sourceTree = "<group>"; };
+		B258A62C1B65C26300A71768 /* DKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKLoginViewController.m; path = ../DKLoginViewController.m; sourceTree = "<group>"; };
+		B258A62D1B65C26300A71768 /* DKLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DKLoginViewController.xib; path = ../DKLoginViewController.xib; sourceTree = "<group>"; };
 		B258A6301B65C3B800A71768 /* DKListDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKListDetailViewController.h; sourceTree = "<group>"; };
 		B258A6311B65C3B800A71768 /* DKListDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKListDetailViewController.m; sourceTree = "<group>"; };
 		B258A6321B65C3B800A71768 /* DKListDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DKListDetailViewController.xib; sourceTree = "<group>"; };
@@ -221,6 +224,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B255BFE71B67255F00D46091 /* iDookLogin */ = {
+			isa = PBXGroup;
+			children = (
+				B255BFE81B67257B00D46091 /* GuideVC.h */,
+				B255BFE91B67257B00D46091 /* GuideVC.m */,
+				B258A62B1B65C26300A71768 /* DKLoginViewController.h */,
+				B258A62C1B65C26300A71768 /* DKLoginViewController.m */,
+				B258A62D1B65C26300A71768 /* DKLoginViewController.xib */,
+			);
+			path = iDookLogin;
+			sourceTree = "<group>";
+		};
 		B258A63A1B66396F00A71768 /* WeiChat */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +269,7 @@
 		B27F53431B58A33E00D8D44C /* iDook */ = {
 			isa = PBXGroup;
 			children = (
+				B255BFE71B67255F00D46091 /* iDookLogin */,
 				B27F53821B58DA5500D8D44C /* iDookModel */,
 				B27F53831B58DB1000D8D44C /* iDookBaseViews */,
 				B27F53A21B58E30A00D8D44C /* ThirdFrameworks */,
@@ -264,9 +280,6 @@
 				B27F53491B58A33E00D8D44C /* AppDelegate.m */,
 				B27F534B1B58A33E00D8D44C /* ViewController.h */,
 				B27F534C1B58A33E00D8D44C /* ViewController.mm */,
-				B258A62B1B65C26300A71768 /* DKLoginViewController.h */,
-				B258A62C1B65C26300A71768 /* DKLoginViewController.m */,
-				B258A62D1B65C26300A71768 /* DKLoginViewController.xib */,
 				B27F53441B58A33E00D8D44C /* Supporting Files */,
 			);
 			path = iDook;
@@ -594,6 +607,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B29810AE1B60C56B00DE374B /* PhotoPickerController.m in Sources */,
+				B255BFEA1B67257B00D46091 /* GuideVC.m in Sources */,
 				B2CEC5B71B5DCF9400FF19E4 /* DKCreateActivityViewController.m in Sources */,
 				B2CEC5BF1B5DF0B100FF19E4 /* DkAddImageView.m in Sources */,
 				B27F53A01B58DEDB00D8D44C /* DkMineViewController.m in Sources */,

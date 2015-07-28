@@ -10,11 +10,17 @@
 #import "DKBaseNavigationViewController.h"
 #import "UITabBarItem+Universal.h"
 #import "Tools.h"
+#import "GuideVC.h"
 #import <BaiduMapAPI/BMapKit.h>//引入所有的头文件
+
+
 
 @interface AppDelegate ()
 {
     BMKMapManager* _mapManager;
+    NSString *WX_code;//拉去的code
+    NSString *WX_access_token;//获取access_token
+    NSString *WX_openid;//openId
 }
 @end
 
@@ -75,13 +81,13 @@
     [self reloadTabBar];
     
     //欢迎页
-//    if ([[[NSUserDefaults standardUserDefaults]objectForKey:@"appversion"]floatValue]<[myAPPVersion floatValue])  {
-//        GuideVC *guideVC=[[GuideVC alloc] init];
-//        self.window.rootViewController = guideVC;
-//    }
-//    else{
+    if ([[[NSUserDefaults standardUserDefaults]objectForKey:@"appversion"]floatValue]<[myAPPVersion floatValue])  {
+        GuideVC *guideVC=[[GuideVC alloc] init];
+        self.window.rootViewController = guideVC;
+    }
+    else{
         self.window.rootViewController = DKTabBarController;
-//    }
+    }
     //初始化百度地图服务
     _mapManager = [[BMKMapManager alloc] init];
     BOOL ret = [_mapManager start:baiduKey generalDelegate:nil];
@@ -94,9 +100,13 @@
     [self.window makeKeyAndVisible];
     return YES;
 }
+
 #pragma mark -  自定义TabBar方法
 - (void)reloadTabBar{
     NSLog(@"刷新TabBar,更新消息数量");
+}
+- (void)gotoMainPage {
+    self.window.rootViewController = DKTabBarController;
 }
 #pragma mark - 控制器默认方法
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -133,5 +143,157 @@
     return  [WXApi handleOpenURL:url delegate:self];
 }
 
+#pragma mark - 微信回调方法
+-(void) onReq:(BaseReq*)req
+{
+    if([req isKindOfClass:[GetMessageFromWXReq class]])
+    {
+        GetMessageFromWXReq *temp = (GetMessageFromWXReq *)req;
+        
+        // 微信请求App提供内容， 需要app提供内容后使用sendRsp返回
+        NSString *strTitle = [NSString stringWithFormat:@"微信请求App提供内容"];
+        NSString *strMsg = [NSString stringWithFormat:@"openID: %@", temp.openID];
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:strTitle message:strMsg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        alert.tag = 1000;
+        [alert show];
+        
+    }
+    else if([req isKindOfClass:[ShowMessageFromWXReq class]])
+    {
+        ShowMessageFromWXReq* temp = (ShowMessageFromWXReq*)req;
+        WXMediaMessage *msg = temp.message;
+        
+        //显示微信传过来的内容
+        WXAppExtendObject *obj = msg.mediaObject;
+        
+        NSString *strTitle = [NSString stringWithFormat:@"微信请求App显示内容"];
+        NSString *strMsg = [NSString stringWithFormat:@"openID: %@, 标题：%@ \n内容：%@ \n附带信息：%@ \n缩略图:%u bytes\n附加消息:%@\n", temp.openID, msg.title, msg.description, obj.extInfo, msg.thumbData.length, msg.messageExt];
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:strTitle message:strMsg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        
+    }
+    else if([req isKindOfClass:[LaunchFromWXReq class]])
+    {
+        LaunchFromWXReq *temp = (LaunchFromWXReq *)req;
+        WXMediaMessage *msg = temp.message;
+        
+        //从微信启动App
+        NSString *strTitle = [NSString stringWithFormat:@"从微信启动"];
+        NSString *strMsg = [NSString stringWithFormat:@"openID: %@, messageExt:%@", temp.openID, msg.messageExt];
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:strTitle message:strMsg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        
+    }
+}
 
+-(void) onResp:(BaseResp*)resp
+{
+    if([resp isKindOfClass:[SendMessageToWXResp class]])
+    {
+        NSString *strTitle = [NSString stringWithFormat:@"发送媒体消息结果"];
+        NSString *strMsg = [NSString stringWithFormat:@"errcode:%d", resp.errCode];
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:strTitle message:strMsg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        
+    }
+    else if([resp isKindOfClass:[SendAuthResp class]])
+    {
+        SendAuthResp *temp = (SendAuthResp*)resp;
+        
+        NSString *strTitle = [NSString stringWithFormat:@"Auth结果"];
+        NSString *strMsg = [NSString stringWithFormat:@"code:%@,state:%@,errcode:%d", temp.code, temp.state, temp.errCode];
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:strTitle message:strMsg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        WX_code = [[NSString alloc] initWithString:temp.code];//保存code
+        debugLog(@"WX_code是%@",WX_code);
+        [self getWXaccessTokenAndopenId];
+    }
+    else if ([resp isKindOfClass:[AddCardToWXCardPackageResp class]])
+    {
+        AddCardToWXCardPackageResp* temp = (AddCardToWXCardPackageResp*)resp;
+        NSMutableString* cardStr = [[NSMutableString alloc] init];
+        for (WXCardItem* cardItem in temp.cardAry) {
+            [cardStr appendString:[NSString stringWithFormat:@"cardid:%@ cardext:%@ cardstate:%lu\n",cardItem.cardId,cardItem.extMsg,cardItem.cardState]];
+        }
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"add card resp" message:cardStr delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        
+    }
+}
+#pragma mark - 获取用户微信信息
+- (void)getWXaccessTokenAndopenId{
+    //https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&secret=SECRET&code=CODE&grant_type=authorization_code
+    //https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&secret=SECRET&code=CODE&grant_type=authorization_code
+    NSString *url =[NSString stringWithFormat:@"https://api.weixin.qq.com/sns/oauth2/access_token?appid=%@&secret=%@&code=%@&grant_type=authorization_code",WXAppkey,WXSecretKey,WX_code];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSURL *zoneUrl = [NSURL URLWithString:url];
+        NSString *zoneStr = [NSString stringWithContentsOfURL:zoneUrl encoding:NSUTF8StringEncoding error:nil];
+        NSData *data = [zoneStr dataUsingEncoding:NSUTF8StringEncoding];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (data) {
+                NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+                /*
+                 {
+                 "access_token" = "OezXcEiiBSKSxW0eoylIeJDUKD6z6dmr42JANLPjNN7Kaf3e4GZ2OncrCfiKnGWiusJMZwzQU8kXcnT1hNs_ykAFDfDEuNp6waj-bDdepEzooL_k1vb7EQzhP8plTbD0AgR8zCRi1It3eNS7yRyd5A";
+                 "expires_in" = 7200;
+                 openid = oyAaTjsDx7pl4Q42O3sDzDtA7gZs;
+                 "refresh_token" = "OezXcEiiBSKSxW0eoylIeJDUKD6z6dmr42JANLPjNN7Kaf3e4GZ2OncrCfiKnGWi2ZzH_XfVVxZbmha9oSFnKAhFsS0iyARkXCa7zPu4MqVRdwyb8J16V8cWw7oNIff0l-5F-4-GJwD8MopmjHXKiA";
+                 scope = "snsapi_userinfo,snsapi_base";
+                 }
+                 */
+                
+                WX_access_token = [dic objectForKey:@"access_token"];
+                WX_openid = [dic objectForKey:@"openid"];
+                debugLog(@"微信access_token是%@",WX_access_token);
+                debugLog(@"微信openId是%@",WX_openid);
+                [self getUserInfo];
+            }
+        });
+    });
+}
+#pragma mark - 获取用户信息
+-(void)getUserInfo
+{
+    // https://api.weixin.qq.com/sns/userinfo?access_token=ACCESS_TOKEN&openid=OPENID
+    
+    NSString *url =[NSString stringWithFormat:@"https://api.weixin.qq.com/sns/userinfo?access_token=%@&openid=%@",WX_access_token,WX_openid];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSURL *zoneUrl = [NSURL URLWithString:url];
+        NSString *zoneStr = [NSString stringWithContentsOfURL:zoneUrl encoding:NSUTF8StringEncoding error:nil];
+        NSData *data = [zoneStr dataUsingEncoding:NSUTF8StringEncoding];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (data) {
+                NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+                /*
+                 {
+                 city = Haidian;
+                 country = CN;
+                 headimgurl = "http://wx.qlogo.cn/mmopen/FrdAUicrPIibcpGzxuD0kjfnvc2klwzQ62a1brlWq1sjNfWREia6W8Cf8kNCbErowsSUcGSIltXTqrhQgPEibYakpl5EokGMibMPU/0";
+                 language = "zh_CN";
+                 nickname = "xxx";
+                 openid = oyAaTjsDx7pl4xxxxxxx;
+                 privilege =     (
+                 );
+                 province = Beijing;
+                 sex = 1;
+                 unionid = oyAaTjsxxxxxxQ42O3xxxxxxs;
+                 }
+                 */
+                
+//                self.nickname.text = [dic objectForKey:@"nickname"];
+//                self.wxHeadImg.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[dic objectForKey:@"headimgurl"]]]];
+                NSLog(@"用户的微信个人信息是%@",dic);
+                
+            }
+        });
+        
+    });
+}
 @end

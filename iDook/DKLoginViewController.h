@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "WXApi.h"
-
+#import "DkActivityViewController.h"
 
 
 @interface DKLoginViewController : UIViewController<WXApiDelegate>
-
+@property (nonatomic,retain)DkActivityViewController *viewController;
 
 @end
