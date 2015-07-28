@@ -14,7 +14,7 @@
 #import "DKLoginViewController.h"
 #import <BaiduMapAPI/BMapKit.h>//引入所有的头文件
 #import "User.h"
-
+#import "CoreHttp.h"
 
 @interface AppDelegate ()
 {
@@ -297,37 +297,79 @@
 //                self.nickname.text = [dic objectForKey:@"nickname"];
 //                self.wxHeadImg.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[dic objectForKey:@"headimgurl"]]]];
                 NSLog(@"用户的微信个人信息是%@",dic);
-                
-                //保存个人信息
-                BOOL set = [self saveUserInfo:dic];
-                if (set) {
-                    //保存已经登录全局变量
-                    [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"isLogin"];
-                    //登录页隐藏，显示tab页
-                    [self gotoMainPage];
-                }else{
-                    debugLog(@"登录失败");
-                }
-                
+                //上传微信信息
+                [self uploadWXinfo:dic];
                 
             }
         });
         
     });
 }
+#pragma mark - //上传微信信息
+- (void)uploadWXinfo:(NSDictionary*)dictionary{
+//    NSMutableDictionary *entityIn =[NSMutableDictionary dictionary];
+//    [entityIn setObject:[dictionary objectForKey:@"city"] forKey:@"city"];
+//    [entityIn setObject:[dictionary objectForKey:@"country"] forKey:@"country"];
+//    [entityIn setObject:[dictionary objectForKey:@"headimgurl"] forKey:@"headimgurl"];
+//    [entityIn setObject:[dictionary objectForKey:@"language"] forKey:@"language"];
+//    [entityIn setObject:[dictionary objectForKey:@"nickname"] forKey:@"nickname"];
+//    [entityIn setObject:[dictionary objectForKey:@"openid"] forKey:@"openid"];
+//    [entityIn setObject:[dictionary objectForKey:@"privilege"] forKey:@"privilege"];
+//    [entityIn setObject:[dictionary objectForKey:@"province"] forKey:@"province"];
+//    [entityIn setObject:[dictionary objectForKey:@"sex"] forKey:@"sex"];
+//    [entityIn setObject:[dictionary objectForKey:@"unionid"] forKey:@"unionid"];
+    
+    //
+    NSMutableDictionary *entity =[[NSMutableDictionary alloc] init];
+    [entity setObject:@"wx" forKey:@"type"];
+    [entity setObject:dictionary forKey:@"entity"];
+    
+    NSMutableDictionary *entDict = [[NSMutableDictionary alloc] initWithObjectsAndKeys:entity, @"entity", nil];
+    NSString * url = [APP_SERVER stringByAppendingString:HTTP_sourceLogin];
+//    [NSURL URLWithString:url]
+    
+    [CoreHttp postUrl:url params:entDict success:^(id obj) {
+        //成功
+        debugLog(@"成功%@",obj);
+        NSDictionary *dicO = [NSJSONSerialization JSONObjectWithData:obj options:NSJSONReadingMutableContainers error:nil];
+        if([dicO objectForKey:@"err"]==0){
+            
+//            [self saveUserInfo:[obj objectForKey:@"data"]];
+            
+            //保存个人信息
+            BOOL set = [self saveUserInfo:[obj objectForKey:@"data"]];
+            if (set) {
+                //保存已经登录全局变量
+                [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"isLogin"];
+                //登录页隐藏，显示tab页
+                [self gotoMainPage];
+            }else{
+                debugLog(@"登录失败");
+            }
+
+        }
+        
+    } errorBlock:^(CoreHttpErrorType errorType) {
+        //失败
+        debugLog(@"失败%d",errorType);
+        
+    }];
+    
+}
+
 - (BOOL)saveUserInfo:(NSDictionary*)dictionary{
     if (dictionary==nil) {
         return NO;
     }
     User *myself = [[User alloc] init];
-    myself.hostID = 1;
-    myself.user_name = [dictionary objectForKey:@"name"];
-    myself.user_nickname = [dictionary objectForKey:@"nickname"];
-    myself.user_headimgurl = [dictionary objectForKey:@"headimgurl"];
-    myself.user_mobile = [dictionary objectForKey:@"mobile"];
-    myself.user_email = [dictionary objectForKey:@"email"];
+    myself.hostID = (NSInteger)[dictionary objectForKey:@"uId"];
+    myself.user_name = [[dictionary objectForKey:@"entity"] objectForKey:@"name"];
+    myself.user_nickname = [[dictionary objectForKey:@"entity"] objectForKey:@"nickname"];
+    myself.user_headimgurl = [[dictionary objectForKey:@"entity"] objectForKey:@"headimgurl"];
+    myself.user_mobile = [[dictionary objectForKey:@"entity"] objectForKey:@"mobile"];
+    myself.user_email = [[dictionary objectForKey:@"entity"] objectForKey:@"email"];
     [User save:myself];
     
-    return YES;
+    return NO;
 }
 @end

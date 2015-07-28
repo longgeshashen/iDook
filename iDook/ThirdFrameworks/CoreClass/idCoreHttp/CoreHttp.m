@@ -12,7 +12,7 @@
 #import <UIKit/UIKit.h>
 
 //定义APP的POST请求是否以标准的JSON格式通讯
-const BOOL kURLConnectionMutualUseJson = NO;
+const BOOL kURLConnectionMutualUseJson = YES;
 
 @implementation CoreHttp
 

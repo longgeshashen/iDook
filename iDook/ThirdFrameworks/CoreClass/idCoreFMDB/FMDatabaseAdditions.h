@@ -48,7 +48,7 @@
 - (long)longForQuery:(NSString*)query, ...;
 
 /** Return `BOOL` value for query
-
+s
  @param query The SQL query to be performed.
  @param ... A list of parameters that will be bound to the `?` placeholders in the SQL query.
 

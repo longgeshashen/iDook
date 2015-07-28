@@ -56,4 +56,13 @@
 #pragma mark ----App版本----
 #define myAPPVersion @"1.000000"  //版本号 1.0.0
 #define isLogin  //是否已经登录
+
+
+//#define APP_SERVER @"http://tstudy.lsb.idook.cn/" //正式
+#define APP_SERVER @"http://192.168.30.227/"//晓前
+//第三方登录
+#define HTTP_sourceLogin @"v1/outside?eventType=outer.user.third.login"
+
+
+
 #endif

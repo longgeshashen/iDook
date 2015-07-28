@@ -291,6 +291,7 @@
 		B255C0CC1B6764B800D46091 /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
 		B255C0D51B6766A600D46091 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		B255C0D61B6766A600D46091 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		B255C0D81B6779CB00D46091 /* url_config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = url_config.h; sourceTree = "<group>"; };
 		B258A62B1B65C26300A71768 /* DKLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKLoginViewController.h; path = ../DKLoginViewController.h; sourceTree = "<group>"; };
 		B258A62C1B65C26300A71768 /* DKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKLoginViewController.m; path = ../DKLoginViewController.m; sourceTree = "<group>"; };
 		B258A62D1B65C26300A71768 /* DKLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DKLoginViewController.xib; path = ../DKLoginViewController.xib; sourceTree = "<group>"; };
@@ -697,6 +698,7 @@
 				B27F53491B58A33E00D8D44C /* AppDelegate.m */,
 				B27F534B1B58A33E00D8D44C /* ViewController.h */,
 				B27F534C1B58A33E00D8D44C /* ViewController.mm */,
+				B255C0D81B6779CB00D46091 /* url_config.h */,
 				B27F53441B58A33E00D8D44C /* Supporting Files */,
 			);
 			path = iDook;
