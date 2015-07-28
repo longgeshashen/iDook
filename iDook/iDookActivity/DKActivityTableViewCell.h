@@ -16,7 +16,7 @@
 
 @interface DKActivityTableViewCell : UITableViewCell
 
-@property (nonatomic)id<DKActivityTableViewCellDelegate>delegate;
+@property (nonatomic,assign)id<DKActivityTableViewCellDelegate>delegate;
 
 @property (nonatomic,retain) UIImageView *dyImgView;       /**<封面图片*/
 @property (nonatomic,retain) UITextView     *dyTitleTextv;    /**<标题*/

@@ -11,8 +11,9 @@
 #import "UITabBarItem+Universal.h"
 #import "Tools.h"
 #import "GuideVC.h"
+#import "DKLoginViewController.h"
 #import <BaiduMapAPI/BMapKit.h>//引入所有的头文件
-
+#import "User.h"
 
 
 @interface AppDelegate ()
@@ -106,7 +107,13 @@
     NSLog(@"刷新TabBar,更新消息数量");
 }
 - (void)gotoMainPage {
-    self.window.rootViewController = DKTabBarController;
+    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"isLogin"]) {
+        DKLoginViewController *loginV = [[DKLoginViewController alloc] init];
+        self.window.rootViewController =loginV;
+    }else{
+        self.window.rootViewController = DKTabBarController;
+    }
+    
 }
 #pragma mark - 控制器默认方法
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -291,9 +298,36 @@
 //                self.wxHeadImg.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[dic objectForKey:@"headimgurl"]]]];
                 NSLog(@"用户的微信个人信息是%@",dic);
                 
+                //保存个人信息
+                BOOL set = [self saveUserInfo:dic];
+                if (set) {
+                    //保存已经登录全局变量
+                    [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"isLogin"];
+                    //登录页隐藏，显示tab页
+                    [self gotoMainPage];
+                }else{
+                    debugLog(@"登录失败");
+                }
+                
+                
             }
         });
         
     });
+}
+- (BOOL)saveUserInfo:(NSDictionary*)dictionary{
+    if (dictionary==nil) {
+        return NO;
+    }
+    User *myself = [[User alloc] init];
+    myself.hostID = 1;
+    myself.user_name = [dictionary objectForKey:@"name"];
+    myself.user_nickname = [dictionary objectForKey:@"nickname"];
+    myself.user_headimgurl = [dictionary objectForKey:@"headimgurl"];
+    myself.user_mobile = [dictionary objectForKey:@"mobile"];
+    myself.user_email = [dictionary objectForKey:@"email"];
+    [User save:myself];
+    
+    return YES;
 }
 @end
