@@ -45,7 +45,8 @@ HMSingletonM(CoreFMDB)
     NSString *key=(NSString *)kCFBundleNameKey;
     NSString *bundleName=infoDict[key];
     //拼接数据库名
-    NSString *dbName=[NSString stringWithFormat:@"%@%@",bundleName,@".sql"];
+//    NSString *dbName=[NSString stringWithFormat:@"%@%@",bundleName,@".sql"];
+    NSString *dbName=[NSString stringWithFormat:@"%@%@",bundleName,@".db"];
     
     //在沙盒中存入数据库文件
     NSString *dbPath=[bundleName.documentsSubFolder stringByAppendingPathComponent:dbName];

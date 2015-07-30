@@ -13,8 +13,13 @@
 @property (nonatomic,copy) NSString *user_name;      /**<用户名  */
 @property (nonatomic,copy) NSString *user_headimgurl;/**<头像地址 */
 @property (nonatomic,copy) NSString *user_nickname;  /**<昵称 */
+@property (nonatomic,copy) NSString *user_sex;       /**<性别 */
+
 @property (nonatomic,copy) NSString *user_mobile;    /**<手机号 */
 @property (nonatomic,copy) NSString *user_email;     /**<邮箱 */
+@property (nonatomic,copy) NSString *user_openid;    /**<openid */
+@property (nonatomic,copy) NSString *user_unionid;   /**<unionid */
+
 
 ///**<级别 */
 //@property (nonatomic,assign) NSUInteger level;

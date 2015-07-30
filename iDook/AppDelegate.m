@@ -211,11 +211,11 @@
     {
         SendAuthResp *temp = (SendAuthResp*)resp;
         
-        NSString *strTitle = [NSString stringWithFormat:@"Auth结果"];
-        NSString *strMsg = [NSString stringWithFormat:@"code:%@,state:%@,errcode:%d", temp.code, temp.state, temp.errCode];
+//        NSString *strTitle = [NSString stringWithFormat:@"Auth结果"];
+//        NSString *strMsg = [NSString stringWithFormat:@"code:%@,state:%@,errcode:%d", temp.code, temp.state, temp.errCode];
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:strTitle message:strMsg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alert show];
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:strTitle message:strMsg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//        [alert show];
         WX_code = [[NSString alloc] initWithString:temp.code];//保存code
         debugLog(@"WX_code是%@",WX_code);
         [self getWXaccessTokenAndopenId];
@@ -330,22 +330,32 @@
     
     [CoreHttp postUrl:url params:entDict success:^(id obj) {
         //成功
+        //json需要转换
         debugLog(@"成功%@",obj);
-        NSDictionary *dicO = [NSJSONSerialization JSONObjectWithData:obj options:NSJSONReadingMutableContainers error:nil];
-        if([dicO objectForKey:@"err"]==0){
-            
-//            [self saveUserInfo:[obj objectForKey:@"data"]];
+        //先转字符串
+//        NSString *receiveStr = [[NSString alloc]initWithData:obj encoding:NSUTF8StringEncoding];
+        //再转data
+//        NSData * data = [obj dataUsingEncoding:NSUTF8StringEncoding];
+        //解析
+//        NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:obj options:NSJSONReadingAllowFragments error:nil];
+        debugLog(@"成功%@",[obj objectForKey:@"data"]);
+        if([obj objectForKey:@"data"]!=nil){
             
             //保存个人信息
-            BOOL set = [self saveUserInfo:[obj objectForKey:@"data"]];
-            if (set) {
-                //保存已经登录全局变量
-                [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"isLogin"];
-                //登录页隐藏，显示tab页
-                [self gotoMainPage];
-            }else{
-                debugLog(@"登录失败");
-            }
+            [self performSelectorOnMainThread:@selector(saveUserInfo:) withObject:[obj objectForKey:@"data"] waitUntilDone:YES];
+//            BOOL set = [self saveUserInfo:[obj objectForKey:@"data"]];
+            
+//            if (set) {
+//                //保存已经登录全局变量
+//                [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"isLogin"];
+//                
+//                //登录页隐藏，显示tab页
+//                [self gotoMainPage];
+//                
+//            }else{
+//                
+//                debugLog(@"登录失败");
+//            }
 
         }
         
@@ -357,19 +367,25 @@
     
 }
 
-- (BOOL)saveUserInfo:(NSDictionary*)dictionary{
-    if (dictionary==nil) {
-        return NO;
-    }
+- (void)saveUserInfo:(NSDictionary*)dictionary{
+    debugLog(@"字典%@",dictionary);
+    //保存个人信息
     User *myself = [[User alloc] init];
     myself.hostID = (NSInteger)[dictionary objectForKey:@"uId"];
-    myself.user_name = [[dictionary objectForKey:@"entity"] objectForKey:@"name"];
+//    myself.user_name = [[dictionary objectForKey:@"entity"] objectForKey:@"name"];
     myself.user_nickname = [[dictionary objectForKey:@"entity"] objectForKey:@"nickname"];
     myself.user_headimgurl = [[dictionary objectForKey:@"entity"] objectForKey:@"headimgurl"];
-    myself.user_mobile = [[dictionary objectForKey:@"entity"] objectForKey:@"mobile"];
-    myself.user_email = [[dictionary objectForKey:@"entity"] objectForKey:@"email"];
+//    myself.user_mobile = [[dictionary objectForKey:@"entity"] objectForKey:@"mobile"];
+//    myself.user_email = [[dictionary objectForKey:@"entity"] objectForKey:@"email"];
+    myself.user_sex = [[dictionary objectForKey:@"entity"] objectForKey:@"sex"];
+    myself.user_openid = [[dictionary objectForKey:@"entity"] objectForKey:@"openid"];
+    myself.user_unionid = [[dictionary objectForKey:@"entity"] objectForKey:@"unionid"];
     [User save:myself];
     
-    return NO;
+    //保存已经登录全局变量
+    [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"isLogin"];
+    
+    //登录页隐藏，显示tab页
+    [self gotoMainPage];
 }
 @end

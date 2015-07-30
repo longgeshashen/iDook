@@ -8,6 +8,8 @@
 
 #import "DKBaseViewController.h"
 
-@interface DkMineViewController : DKBaseViewController
+@interface DkMineViewController : DKBaseViewController<UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic,retain) UITableView *mineTableView;
 
 @end
