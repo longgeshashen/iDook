@@ -50,7 +50,7 @@
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     rightBtn.frame = CGRectMake(0, 0, 25, 25);
     [rightBtn addTarget:self action:@selector(addNewActivity) forControlEvents:UIControlEventTouchUpInside];
-    [rightBtn setBackgroundImage:[UIImage imageNamed:@"iDook_navigation_rightBtn"] forState:UIControlStateNormal];
+    [rightBtn setBackgroundImage:[UIImage imageNamed:@"iDook_publish_btn"] forState:UIControlStateNormal];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
     self.navigationItem.rightBarButtonItem = rightItem;
 }

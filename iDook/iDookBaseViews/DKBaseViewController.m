@@ -31,7 +31,7 @@
     //backBtn
     if (!isBoot) {
         UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        UIImage *btnImage=[UIImage imageNamed:@"base_back"];
+        UIImage *btnImage=[UIImage imageNamed:@"iDook_back_btn"];
         [backBtn setImage:btnImage forState:UIControlStateNormal];
         [backBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         backBtn.frame = CGRectMake(0, 0, 22.5, 22.5);

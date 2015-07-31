@@ -60,6 +60,8 @@
 
 //#define APP_SERVER @"http://tstudy.lsb.idook.cn/" //正式
 #define APP_SERVER @"http://192.168.30.227/"//晓前
+
+#define myHostId  @"myHostId"
 //第三方登录
 #define HTTP_sourceLogin @"v1/outside?eventType=outer.user.third.login"
 

@@ -37,8 +37,8 @@
     DKTabBarController = [[UITabBarController alloc] init];
     
 
-    NSArray *tabImage = @[@"btnav-act",@"btnav-mclass",@"btnav-my"];
-    NSArray *tabImage_select = @[@"btnav-act2",@"btnav-mclass2",@"btnav-my2"];//这里可以不加选中变色的图片
+    NSArray *tabImage = @[@"iDook_bottommenu_list",@"iDook_bottommenu_pic",@"iDook_bottommenu_mine"];
+    NSArray *tabImage_select = @[@"iDook_bottommenu_list1",@"iDook_bottommenu_pic1",@"iDook_bottommenu_mine1"];//这里可以不加选中变色的图片
     NSArray *viewControllerArray=@[@"DKAddressListViewController",@"DkActivityViewController",@"DkMineViewController"];
     NSArray *tabTitle=@[@"线索",@"图文",@"我的"];
     NSMutableArray *recordViewControllers=[[NSMutableArray alloc]initWithCapacity:0];
@@ -53,6 +53,7 @@
         [_navigationController setTabBarItem:tabBarItem];
         [recordViewControllers addObject:_navigationController];
     }
+    
     //tabbar选中颜色和title颜色
     if ([[[UIDevice currentDevice]systemVersion]floatValue]<7.0) {
         
@@ -111,6 +112,7 @@
         DKLoginViewController *loginV = [[DKLoginViewController alloc] init];
         self.window.rootViewController =loginV;
     }else{
+        
         self.window.rootViewController = DKTabBarController;
     }
     
@@ -371,7 +373,8 @@
     debugLog(@"字典%@",dictionary);
     //保存个人信息
     User *myself = [[User alloc] init];
-    myself.hostID = (NSInteger)[dictionary objectForKey:@"uId"];
+    myself.hostID = (NSUInteger)[dictionary objectForKey:@"uId"];
+    myself.user_serverId = [dictionary objectForKey:@"uId"];
 //    myself.user_name = [[dictionary objectForKey:@"entity"] objectForKey:@"name"];
     myself.user_nickname = [[dictionary objectForKey:@"entity"] objectForKey:@"nickname"];
     myself.user_headimgurl = [[dictionary objectForKey:@"entity"] objectForKey:@"headimgurl"];
@@ -380,8 +383,9 @@
     myself.user_sex = [[dictionary objectForKey:@"entity"] objectForKey:@"sex"];
     myself.user_openid = [[dictionary objectForKey:@"entity"] objectForKey:@"openid"];
     myself.user_unionid = [[dictionary objectForKey:@"entity"] objectForKey:@"unionid"];
+    myself.user_relationship = 0;
     [User save:myself];
-    
+
     //保存已经登录全局变量
     [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"isLogin"];
     

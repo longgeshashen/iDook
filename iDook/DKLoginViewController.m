@@ -30,8 +30,8 @@
     UIImage *bgImage = [UIImage imageNamed:@"iDook_login_bg"];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:bgImage]];
     //
-    UIButton *loginBtn = [[UIButton alloc] initWithFrame:CGRectMake(30, 330, kWidth-60, 60)];
-    loginBtn.backgroundColor= [UIColor clearColor];
+    UIButton *loginBtn = [[UIButton alloc] initWithFrame:CGRectMake(20, 327, kWidth-40, 60)];
+    [loginBtn setBackgroundImage:[UIImage imageNamed:@"iDook_login_btn"] forState:UIControlStateNormal];
     [loginBtn addTarget:self action:@selector(sendAuthRequest) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginBtn];
 }

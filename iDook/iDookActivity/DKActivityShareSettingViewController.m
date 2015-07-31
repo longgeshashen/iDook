@@ -82,7 +82,7 @@
     rightBtn.frame = CGRectMake(0, 0, 40, 40);
     [rightBtn addTarget:self action:@selector(saveShareSetting) forControlEvents:UIControlEventTouchUpInside];
     [rightBtn setTitle:@"保存" forState:UIControlStateNormal];
-//    [rightBtn setBackgroundImage:[UIImage imageNamed:@"iDook_navigation_rightBtn"] forState:UIControlStateNormal];
+
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
     self.navigationItem.rightBarButtonItem = rightItem;
 }
@@ -267,13 +267,16 @@
 //                [self.view makeToast:@"最多只能选择1张图片"];
 //                return;
 //            }
-            if([[[UIDevice
-                  currentDevice] systemVersion] floatValue]>=8.0) {
-                
-                self.modalPresentationStyle=UIModalPresentationOverCurrentContext;
-                
+            if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+            {
+                [photoPicker showWithCameraByDefined];
             }
-            [photoPicker showWithCamera];
+            else
+            {
+                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:nil message:@"您的设备暂无照相功能！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:@"从相册选择", nil];
+                [alert show];
+                return;
+            }
         }
             break;
         case 1:

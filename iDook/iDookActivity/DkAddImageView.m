@@ -22,7 +22,7 @@
     NSUInteger pageCount=[imageArray count];
     if (pageCount==0) {
         addButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 15, 70, 70)];
-        [addButton setBackgroundImage:[UIImage imageNamed:@"iDook_create_btn"] forState:UIControlStateNormal];
+        [addButton setBackgroundImage:[UIImage imageNamed:@"iDook_addImage_btn"] forState:UIControlStateNormal];
         [addButton addTarget:self action:@selector(addPictures:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:addButton];
     }else {
@@ -72,7 +72,7 @@
         [self addSubview:scrollView];
         //
         addButton = [[UIButton alloc] initWithFrame:CGRectMake(scrollRect.size.width+5, 15, 70, 70)];
-        [addButton setBackgroundImage:[UIImage imageNamed:@"iDook_create_btn"] forState:UIControlStateNormal];
+        [addButton setBackgroundImage:[UIImage imageNamed:@"iDook_addImage_btn"] forState:UIControlStateNormal];
         [addButton addTarget:self action:@selector(addPictures:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:addButton];
         

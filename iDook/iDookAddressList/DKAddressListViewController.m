@@ -52,7 +52,7 @@
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     rightBtn.frame = CGRectMake(0, 0, 25, 25);
     [rightBtn addTarget:self action:@selector(searchList) forControlEvents:UIControlEventTouchUpInside];
-    [rightBtn setBackgroundImage:[UIImage imageNamed:@"iDook-searchBtn"] forState:UIControlStateNormal];
+    [rightBtn setBackgroundImage:[UIImage imageNamed:@"iDook_search_btn"] forState:UIControlStateNormal];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
     self.navigationItem.rightBarButtonItem = rightItem;
     

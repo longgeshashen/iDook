@@ -7,9 +7,15 @@
 //
 
 #import "DkMineViewController.h"
+#import "DKMineInfoViewController.h"
+#import "User.h"
+#import "UIImageView+WebCache.h"
+#import "DKUserServerce.h"
 
 @interface DkMineViewController ()
-
+{
+    User *user;
+}
 @end
 
 @implementation DkMineViewController
@@ -22,7 +28,7 @@
     NSLog(@"我的页面");
     self.title = @"我的";
     [self loadMyView];
-    
+    user = [[DKUserServerce sharedInstance] getMyself];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -78,6 +84,12 @@
         if(indexPath.section==0){
             //头像
             UIImageView *portrialImagView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 63, 63)];
+            if ([user.user_headimgurl isKindOfClass:[NSString class]] && [user.user_headimgurl length] > 0) {
+                [portrialImagView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@?imageView2/1/w/200/h/200",user.user_headimgurl]] placeholderImage:[UIImage imageNamed:@"headerimg01"]];
+            }
+            else {
+                [portrialImagView setImage:[UIImage imageNamed:@"headerimg01"]];
+            }
             portrialImagView.image = [UIImage imageNamed:@"noimage_tucao"];
             [cell.contentView addSubview:portrialImagView];
             //名字
@@ -88,7 +100,12 @@
             UILabel *isOnlineL = [[UILabel alloc] initWithFrame:CGRectMake(90, 45, 120, 30)];
             isOnlineL.font = [UIFont systemFontOfSize:12.0];
             isOnlineL.textColor = colorLightGray;
-            isOnlineL.text = @"未登录";
+            if ([[NSUserDefaults standardUserDefaults] objectForKey:@"isLogin"]) {
+                isOnlineL.text = @"在线";
+            }else{
+                isOnlineL.text = @"未登录";
+            }
+            
             [cell.contentView addSubview:isOnlineL];
             //row
             UIImageView *imaVrow = [[UIImageView alloc] initWithFrame:CGRectMake(kWidth-25, 31, 20, 20)];
@@ -155,6 +172,12 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     debugLog(@"我的选择%d",indexPath.row);
+    if (indexPath.section==0) {
+        DKMineInfoViewController *mineInfo = [[DKMineInfoViewController alloc] init];
+        mineInfo.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:mineInfo animated:YES];
+    }
+    
 }
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {

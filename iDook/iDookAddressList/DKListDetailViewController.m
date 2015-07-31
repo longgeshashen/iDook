@@ -31,6 +31,16 @@
     listDetailTableView.dataSource = self;
     listDetailTableView.delegate = self;
     [self.view addSubview:listDetailTableView];
+    //更多按钮
+    UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightBtn.frame = CGRectMake(0, 0, 25, 25);
+    [rightBtn addTarget:self action:@selector(getMore) forControlEvents:UIControlEventTouchUpInside];
+    [rightBtn setBackgroundImage:[UIImage imageNamed:@"iDook_more_btn"] forState:UIControlStateNormal];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
+    self.navigationItem.rightBarButtonItem = rightItem;
+}
+- (void)getMore{
+    
 }
 #pragma mark - UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

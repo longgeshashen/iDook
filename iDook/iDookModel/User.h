@@ -19,8 +19,10 @@
 @property (nonatomic,copy) NSString *user_email;     /**<邮箱 */
 @property (nonatomic,copy) NSString *user_openid;    /**<openid */
 @property (nonatomic,copy) NSString *user_unionid;   /**<unionid */
+@property (nonatomic,copy) NSString *user_birthday;  /**<生日 */
 
-
+@property (nonatomic,assign) NSUInteger user_relationship;   /**<0自己，1不是自己 */
+@property (nonatomic,copy) NSString *user_serverId;       /**<服务器传来的id是字符串，但是数据库操作的标示是integer */
 ///**<级别 */
 //@property (nonatomic,assign) NSUInteger level;
 //
