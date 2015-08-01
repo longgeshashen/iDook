@@ -12,5 +12,5 @@
 @interface DkActivityViewController : DKBaseViewController<UITableViewDataSource,UITableViewDelegate,DKActivityTableViewCellDelegate>
 
 @property (nonatomic,retain) UITableView *dkActTableView;/**<动态列表*/
-
+@property (nonatomic,retain) NSMutableArray *dataArray;//图文数组
 @end

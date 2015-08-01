@@ -11,7 +11,11 @@
 #import "DKListDetailViewController.h"
 
 @interface DKAddressListViewController ()
-
+{
+    User *user;
+    NSInteger pageNumber;
+    NSMutableArray *dataArray;
+}
 @end
 
 @implementation DKAddressListViewController
@@ -32,11 +36,41 @@
 }
 #pragma mark - 自定义方法初始化数据
 - (void)loadMydata{
+    user = [[DKUserServerce sharedInstance] getMyself];
+    //服务器获取动态列表
+    NSMutableDictionary *entity =[[NSMutableDictionary alloc] init];
+    [entity setObject:user.user_serverId forKey:@"uId"];
+    [entity setObject:[NSString stringWithFormat:@"%d",pageNumber] forKey:@"start"];
+    [entity setObject:[NSString stringWithFormat:@"5"] forKey:@"limit"];
+    
+    
+    NSMutableDictionary *entDict = [[NSMutableDictionary alloc] initWithObjectsAndKeys:entity, @"entity", nil];
+    NSString * url = [APP_SERVER stringByAppendingString:HTTP_getContactList];
+    
+    [CoreHttp postUrl:url params:entDict success:^(id obj) {
+        //
+        debugLog(@"获取的线索列表是%@",obj);
+        if([obj objectForKey:@"data"]!=nil){
+            
+            //保存个人信息
+            [self performSelectorOnMainThread:@selector(saveContactList:) withObject:[obj objectForKey:@"data"] waitUntilDone:YES];
+        }
+        
+    } errorBlock:^(CoreHttpErrorType errorType) {
+        //
+        
+    }];
+}
+- (void)saveContactList:(NSDictionary*)dictionary{
+    dataArray = [[NSMutableArray alloc] initWithArray:[dictionary objectForKey:@"list"]];
+    [addresstableView reloadData];
+//    debugLog(@"保存字典%@",dataArray);
     
 }
+
 - (void)loadMyView{
     
-    addresstableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight) style:UITableViewStylePlain];
+    addresstableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight) style:UITableViewStyleGrouped];
     addresstableView.delegate = self;
     addresstableView.dataSource = self;
     if ([addresstableView respondsToSelector:@selector(setSeparatorInset:)]) {
@@ -47,6 +81,9 @@
     }
 
     [self.view addSubview:addresstableView];
+    
+    
+    
     
     //搜索按钮
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -68,7 +105,7 @@
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 8;
+    return [dataArray count];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 80;
@@ -77,12 +114,16 @@
     return 5.0;
 }
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSDictionary *listDic;
+    if ([dataArray count]!=0) {
+        listDic = [dataArray objectAtIndex:indexPath.row];
+    }
     static NSString *Cell = @"addresscell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Cell];
     if (cell==nil) {
 //        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Cell];
         DKAddressListCell *dkcell = [[[NSBundle mainBundle] loadNibNamed:@"DKAddressListCell" owner:self options:nil] lastObject];
-        [dkcell loadAddressListCellWithDictionary:nil];
+        [dkcell loadAddressListCellWithDictionary:listDic];
         cell = dkcell;
     }
     
@@ -94,6 +135,7 @@
     // 选择一个人，查看详情
     DKListDetailViewController *listDetail = [[DKListDetailViewController alloc] init];
     listDetail.hidesBottomBarWhenPushed = YES;
+    listDetail.userOriginId = [[[[dataArray objectAtIndex:indexPath.row] objectForKey:@"ref"] objectForKey:@"from"] objectForKey:@"$id"];
     [self.navigationController pushViewController:listDetail animated:YES];
 }
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath

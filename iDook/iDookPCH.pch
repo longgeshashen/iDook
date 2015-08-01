@@ -11,7 +11,13 @@
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
-#import "UIView+Toast.h"
+#import "UIView+Toast.h"     //全局的提示方法
+#import "url_config.h"       //服务器交互的配置文件
+#import "CoreHttp.h"
+#import "User.h"
+#import "DKUserServerce.h"
+#import "Tools.h"
+#import "UIImageView+WebCache.h"
 
 
 #pragma mark ----百度地图key----
@@ -44,11 +50,11 @@
 #define kHeight [UIScreen mainScreen].bounds.size.height
 
 #define kDeviceVersion [[[UIDevice currentDevice] systemVersion] floatValue]
-#define kIphone5  [UIScreen mainScreen].bounds.size.height == 568
-#define kIphone4  [UIScreen mainScreen].bounds.size.height == 480
-#define kIphone6  [UIScreen mainScreen].bounds.size.height == 667
-#define kIphone6plus [UIScreen mainScreen].bounds.size.height == 960
-#define topBarheight      ([[[UIDevice currentDevice] systemVersion] floatValue]>=7.0?64:44)                                                                      //状态栏和导航栏位置
+#define kIphone5       [UIScreen mainScreen].bounds.size.height == 568
+#define kIphone4       [UIScreen mainScreen].bounds.size.height == 480
+#define kIphone6       [UIScreen mainScreen].bounds.size.height == 667
+#define kIphone6plus   [UIScreen mainScreen].bounds.size.height == 960
+#define topBarheight   ([[[UIDevice currentDevice] systemVersion] floatValue]>=7.0?64:44) //状态栏和导航栏位置
 
 #define autoSizeScaleX kIphone6?1.171875:(kIphone6plus?1.29375:1)
 #define autoSizeScaleY kIphone6?1.17429577:(kIphone6plus?1.2957:1)
@@ -56,15 +62,6 @@
 #pragma mark ----App版本----
 #define myAPPVersion @"1.000000"  //版本号 1.0.0
 #define isLogin  //是否已经登录
-
-
-//#define APP_SERVER @"http://tstudy.lsb.idook.cn/" //正式
-#define APP_SERVER @"http://192.168.30.227/"//晓前
-
-#define myHostId  @"myHostId"
-//第三方登录
-#define HTTP_sourceLogin @"v1/outside?eventType=outer.user.third.login"
-
 
 
 #endif

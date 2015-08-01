@@ -90,7 +90,7 @@
             else {
                 [portrialImagView setImage:[UIImage imageNamed:@"headerimg01"]];
             }
-            portrialImagView.image = [UIImage imageNamed:@"noimage_tucao"];
+            
             [cell.contentView addSubview:portrialImagView];
             //名字
             UILabel *nameL = [[UILabel alloc] initWithFrame:CGRectMake(90, 13, 180, 40)];

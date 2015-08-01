@@ -122,6 +122,8 @@
 		B27F53A91B58E73100D8D44C /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F53A81B58E73100D8D44C /* Tools.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B27F53AF1B58E83400D8D44C /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F53AE1B58E83400D8D44C /* SSKeychain.m */; };
 		B27F53BE1B59070500D8D44C /* DKDynamic.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F53BD1B59070500D8D44C /* DKDynamic.m */; };
+		B28323581B6C951400176DAA /* DKActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B28323561B6C951400176DAA /* DKActivityDetailViewController.m */; };
+		B28323591B6C951400176DAA /* DKActivityDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B28323571B6C951400176DAA /* DKActivityDetailViewController.xib */; };
 		B29810A31B60927C00DE374B /* createImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B29810A21B60927C00DE374B /* createImage.jpg */; };
 		B29810A71B60BFAB00DE374B /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = B29810A61B60BFAB00DE374B /* UIView+Toast.m */; };
 		B29810AD1B60C56B00DE374B /* CTAssetsPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29810AA1B60C56B00DE374B /* CTAssetsPickerController.m */; };
@@ -405,6 +407,9 @@
 		B27F53AE1B58E83400D8D44C /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
 		B27F53BC1B59070500D8D44C /* DKDynamic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKDynamic.h; sourceTree = "<group>"; };
 		B27F53BD1B59070500D8D44C /* DKDynamic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKDynamic.m; sourceTree = "<group>"; };
+		B28323551B6C951400176DAA /* DKActivityDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKActivityDetailViewController.h; sourceTree = "<group>"; };
+		B28323561B6C951400176DAA /* DKActivityDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKActivityDetailViewController.m; sourceTree = "<group>"; };
+		B28323571B6C951400176DAA /* DKActivityDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DKActivityDetailViewController.xib; sourceTree = "<group>"; };
 		B29810A21B60927C00DE374B /* createImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = createImage.jpg; sourceTree = "<group>"; };
 		B29810A51B60BFAB00DE374B /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		B29810A61B60BFAB00DE374B /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
@@ -811,7 +816,6 @@
 				B27F53491B58A33E00D8D44C /* AppDelegate.m */,
 				B27F534B1B58A33E00D8D44C /* ViewController.h */,
 				B27F534C1B58A33E00D8D44C /* ViewController.mm */,
-				B255C0D81B6779CB00D46091 /* url_config.h */,
 				B27F53441B58A33E00D8D44C /* Supporting Files */,
 			);
 			path = iDook;
@@ -825,6 +829,7 @@
 				B27F534E1B58A33E00D8D44C /* Main.storyboard */,
 				B27F53531B58A33E00D8D44C /* LaunchScreen.xib */,
 				B27F53511B58A33E00D8D44C /* Images.xcassets */,
+				B255C0D81B6779CB00D46091 /* url_config.h */,
 				B27F53A61B58E4B400D8D44C /* iDookPCH.pch */,
 				B27F53451B58A33E00D8D44C /* Info.plist */,
 				B27F53461B58A33E00D8D44C /* main.m */,
@@ -880,6 +885,9 @@
 				B25E2F261B59F93100F48886 /* DKActivityTableViewCell.h */,
 				B25E2F271B59F93100F48886 /* DKActivityTableViewCell.m */,
 				B25E2F281B59F93100F48886 /* DKActivityTableViewCell.xib */,
+				B28323551B6C951400176DAA /* DKActivityDetailViewController.h */,
+				B28323561B6C951400176DAA /* DKActivityDetailViewController.m */,
+				B28323571B6C951400176DAA /* DKActivityDetailViewController.xib */,
 				B2CEC5B41B5DCF9400FF19E4 /* DKCreateActivityViewController.h */,
 				B2CEC5B51B5DCF9400FF19E4 /* DKCreateActivityViewController.m */,
 				B2CEC5B61B5DCF9400FF19E4 /* DKCreateActivityViewController.xib */,
@@ -1119,6 +1127,7 @@
 				B2E887DE1B61EE3C00B8FF26 /* mapapi.bundle in Resources */,
 				B27F53971B58DEA100D8D44C /* DkActivityViewController.xib in Resources */,
 				B2CEC5B81B5DCF9400FF19E4 /* DKCreateActivityViewController.xib in Resources */,
+				B28323591B6C951400176DAA /* DKActivityDetailViewController.xib in Resources */,
 				B27F53501B58A33E00D8D44C /* Main.storyboard in Resources */,
 				B27F539C1B58DECB00D8D44C /* DKAddressListViewController.xib in Resources */,
 				B27F53551B58A33E00D8D44C /* LaunchScreen.xib in Resources */,
@@ -1258,6 +1267,7 @@
 				B27F538C1B58DC5800D8D44C /* DKBaseViewController.m in Sources */,
 				B27F53A51B58E33400D8D44C /* UITabBarItem+Universal.m in Sources */,
 				B255C04F1B67631C00D46091 /* NSString+CoreFMDB.m in Sources */,
+				B28323581B6C951400176DAA /* DKActivityDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

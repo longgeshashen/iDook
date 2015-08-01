@@ -12,9 +12,9 @@
 @synthesize dyImgView;
 @synthesize dyTitleTextv;
 //@synthesize lookImgView;
-//@synthesize lookCount;
+@synthesize lookCount;
 //@synthesize forwardImgView;
-//@synthesize forwardCount;
+@synthesize forwardCount;
 //@synthesize reportBtn;
 //@synthesize editBtn;
 //@synthesize lookBtn;
@@ -29,42 +29,50 @@
 }
 #pragma mark - initCell
 - (void)loadActivitytableViewCellWith:(NSDictionary*)dictionary{
-     self.backgroundColor = [UIColor colorWithRed:236/255.0 green:236/255.0 blue:236/255.0 alpha:1.0];
+    lookCount = 0;
+    forwardCount = 0;
+     self.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1.0];
     //背景图
-    UIView *cellbgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kWidth, 150-10)];
+    UIView *cellbgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kWidth, 330-10)];
     NSLog(@"cell的高度是%f",self.frame.size.height);
     cellbgView.backgroundColor = [UIColor whiteColor];
     [self.contentView addSubview:cellbgView];
     
     //封面图
-    dyImgView = [[UIImageView alloc] initWithFrame:CGRectMake(15, 10, 80, 80)];
-    dyImgView.image = [UIImage imageNamed:@"noimage_tucao"];
-    dyImgView.layer.cornerRadius = 3;
-    
+    NSArray *coverArr = [dictionary objectForKey:@"cover"];
+    NSString *imageUrl = [[coverArr objectAtIndex:0] objectForKey:@"url"];
+    dyImgView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 5, kWidth-20, 200)];
+
+    if ([imageUrl isKindOfClass:[NSString class]] && [imageUrl length] > 0) {
+        [dyImgView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@?imageView2/1/w/200/h/200",imageUrl]] placeholderImage:[UIImage imageNamed:@"noimage_tucao"]];
+    }
+    else {
+        [dyImgView setImage:[UIImage imageNamed:@"noimage_tucao"]];
+    }
     [cellbgView addSubview:dyImgView];
     
     //分割线
-    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 100, kWidth, 0.5)];
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 280, kWidth, 0.5)];
     lineView.backgroundColor = colorLineView;
     [cellbgView addSubview:lineView];
     
     for (int i=1; i<=3; i++) {
         if (i<3) {
-            UIView *linView = [[UIView alloc] initWithFrame:CGRectMake(kWidth*i/3, 105, 0.5, 30)];
+            UIView *linView = [[UIView alloc] initWithFrame:CGRectMake(kWidth*i/3, 285, 0.5, 30)];
             linView.backgroundColor = colorLineView;
             [cellbgView addSubview:linView];
         }
         //btn
-        UIButton *cellbtn = [[UIButton alloc] initWithFrame:CGRectMake(kWidth*(i-1)/3+5, 107, kWidth/3-10, 26)];
+        UIButton *cellbtn = [[UIButton alloc] initWithFrame:CGRectMake(kWidth*(i-1)/3+5, 287, kWidth/3-10, 26)];
         [cellbtn addTarget:self action:@selector(tapCellButton:) forControlEvents:UIControlEventTouchUpInside];
         cellbtn.tag = 100+i;
         [cellbgView addSubview:cellbtn];
         //img,动态的小图标
-        UIImageView *iconcellImg = [[UIImageView alloc] initWithFrame:CGRectMake(kWidth*(2*i-1)/6-20, 110, 20, 20)];
-        iconcellImg.image = [UIImage imageNamed:[NSString stringWithFormat:@"icon-activity-%d",i]];
+        UIImageView *iconcellImg = [[UIImageView alloc] initWithFrame:CGRectMake(kWidth*(2*i-1)/6-20, 290, 20, 20)];
+        iconcellImg.image = [UIImage imageNamed:[NSString stringWithFormat:@"iDook_icon_activity%d",i]];
         [cellbgView addSubview:iconcellImg];
         //label
-        UILabel *cellLabel = [[UILabel alloc]initWithFrame:CGRectMake(kWidth*(2*i-1)/6, 105, kWidth/6, 30)];
+        UILabel *cellLabel = [[UILabel alloc]initWithFrame:CGRectMake(kWidth*(2*i-1)/6, 285, kWidth/6, 30)];
         cellLabel.font = [UIFont systemFontOfSize:12];
         cellLabel.textColor = [UIColor lightGrayColor];
         switch (i) {
@@ -91,11 +99,11 @@
     }
     
     //标题描述
-    dyTitleTextv = [[UITextView alloc] initWithFrame:CGRectMake(100, 8, kWidth-105, 60)];
-    dyTitleTextv.font = [UIFont systemFontOfSize:15];
-    dyTitleTextv.text = @"明天在太阳系有重要活动，希望届时所有星球前去参加好不好";
-    if ([dyTitleTextv.text length]>24) {
-        //字数超过24，省略
+    dyTitleTextv = [[UITextView alloc] initWithFrame:CGRectMake(10, 210, kWidth-20, 60)];
+    dyTitleTextv.font = [UIFont systemFontOfSize:13];
+    dyTitleTextv.text = [dictionary objectForKey:@"title"];
+    if ([dyTitleTextv.text length]>45) {
+        //字数超过45，省略
         NSString *textString = [[dyTitleTextv.text substringToIndex:24] stringByAppendingString:@"..."];
         dyTitleTextv.text = textString;
     }
@@ -105,37 +113,54 @@
     
     
     //time
-    UILabel *timeLabel = [[UILabel alloc]initWithFrame:CGRectMake(110, 50, 80, 40)];
-    timeLabel.text = @"2小时前";
-    timeLabel.font = [UIFont systemFontOfSize:15];
+    UILabel *timeLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, 254, 130, 30)];
+    timeLabel.text = [NSString stringWithFormat:@"%@",[dictionary objectForKey:@"createTime"]];
+    timeLabel.font = [UIFont systemFontOfSize:12];
     timeLabel.textColor = colorLightGray;
     timeLabel.textAlignment = NSTextAlignmentLeft;
     [cellbgView addSubview:timeLabel];
     
     //浏览和转发
-    UIView *lookAndForwardView = [[UIView alloc] initWithFrame:CGRectMake(kWidth-155, 50, 140, 40)];
+    NSString *strEntity;
+    NSDictionary *numsDic = [dictionary objectForKey:@"nums"];
+    NSArray *allKeys = [numsDic allKeys];
+    for (int i=0; i<[allKeys count]; i++) {
+        NSObject *keysDicEntity = [allKeys objectAtIndex:i];
+        if ([keysDicEntity isKindOfClass:[NSDictionary class]]) {
+//            NSData* jsonDataa =[NSJSONSerialization dataWithJSONObject:keysDicEntity options:NSJSONWritingPrettyPrinted error: nil];
+//            strEntity = [[NSString alloc] initWithData: jsonDataa encoding: NSUTF8StringEncoding];
+        }
+        else if ([keysDicEntity isKindOfClass:[NSString class]]) {
+            strEntity = [NSString stringWithFormat:@"%@",keysDicEntity];
+            if ([strEntity isEqualToString:@"1003"]) {
+                lookCount = [numsDic objectForKey:keysDicEntity];
+            }else if ([strEntity isEqualToString:@"1002"]){
+                forwardCount = [numsDic objectForKey:keysDicEntity];
+            }
+        }
+    }
+   
+    UIView *lookAndForwardView = [[UIView alloc] initWithFrame:CGRectMake(kWidth-155, 250, 140, 30)];
 //    lookAndForwardView.backgroundColor = [UIColor purpleColor];
     [cellbgView addSubview:lookAndForwardView];
-    UIView *lineV = [[UIView alloc] initWithFrame:CGRectMake(70, 13, 0.5, 14)];
+    UIView *lineV = [[UIView alloc] initWithFrame:CGRectMake(70, 15, 0.5, 10)];
     lineV.backgroundColor = colorLightGray;
     [lookAndForwardView addSubview:lineV];
     //look
-    NSString *lookCounStr = @"524";
-    UILabel *lookLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 70, 40)];
-    lookLabel.text = [NSString stringWithFormat:@"浏览%@",lookCounStr];
-    lookLabel.font = [UIFont systemFontOfSize:14];
+
+    UILabel *lookLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 65, 40)];
+    lookLabel.text = [NSString stringWithFormat:@"浏览%@",lookCount];
+    lookLabel.font = [UIFont systemFontOfSize:12];
     lookLabel.textColor = colorLightGray;
-    lookLabel.textAlignment = NSTextAlignmentLeft;
+    lookLabel.textAlignment = NSTextAlignmentRight;
     [lookAndForwardView addSubview:lookLabel];
     
-    NSString *forwardCounStr = @"124";
-    UILabel *forwardLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 0, 70, 40)];
-    forwardLabel.text = [NSString stringWithFormat:@"转发%@",forwardCounStr];
-    forwardLabel.font = [UIFont systemFontOfSize:14];
+    UILabel *forwardLabel = [[UILabel alloc] initWithFrame:CGRectMake(75, 0, 70, 40)];
+    forwardLabel.text = [NSString stringWithFormat:@"转发%@",forwardCount];
+    forwardLabel.font = [UIFont systemFontOfSize:12];
     forwardLabel.textColor = colorLightGray;
-    forwardLabel.textAlignment = NSTextAlignmentRight;
+    forwardLabel.textAlignment = NSTextAlignmentLeft;
     [lookAndForwardView addSubview:forwardLabel];
-    
     
 }
 

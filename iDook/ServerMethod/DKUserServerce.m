@@ -22,7 +22,7 @@
 - (User*)getMyself{
     NSArray *userArr = [User selectWhere:@"user_relationship=0" groupBy:nil orderBy:nil limit:nil];
     User *user = [userArr objectAtIndex:0];
-    NSLog(@"人信息是＊＊＊＊\n%@",user);
+//    NSLog(@"人信息是＊＊＊＊\n%@",user);
     return user;
 }
 

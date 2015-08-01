@@ -41,9 +41,25 @@
     faceImage = [UIImage imageNamed:@"noimage_tucao" ];
     //
     user = [[DKUserServerce sharedInstance] getMyself];
-
+    
+    [self getUserInfoOnline];
 }
+#pragma mark - 获取服务器的个人资料
+- (void)getUserInfoOnline{
+    NSMutableDictionary *entity =[[NSMutableDictionary alloc] init];
+    [entity setObject:user.user_serverId forKey:@"uId"];
+    
+    NSMutableDictionary *entDict = [[NSMutableDictionary alloc] initWithObjectsAndKeys:entity, @"entity", nil];
+    NSString * url = [APP_SERVER stringByAppendingString:HTTP_getUserInfo];
 
+    [CoreHttp postUrl:url params:entDict success:^(id obj) {
+        //
+        debugLog(@"获取的个人信息是%@",obj);
+        
+    } errorBlock:^(CoreHttpErrorType errorType) {
+        //
+    }];
+}
 - (void)loadMyViews{
     mineInfoTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight) style:UITableViewStyleGrouped];
     mineInfoTableView.dataSource = self;
@@ -102,8 +118,6 @@
                 else {
                     [cellfaceImageView setImage:[UIImage imageNamed:@"headerimg01"]];
                 }
-
-//                cellfaceImageView.image = faceImage;
                 cellfaceImageView.layer.cornerRadius = 6.0;
                 cellfaceImageView.layer.borderWidth = 0.2;
                 cellfaceImageView.layer.borderColor = [colorLightGray CGColor];
