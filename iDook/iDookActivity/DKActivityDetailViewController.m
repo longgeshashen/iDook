@@ -23,13 +23,9 @@
     
     webView = [[UIWebView alloc]  initWithFrame:CGRectMake(0, 0, kWidth, kHeight)];
     NSURL *url = [NSURL URLWithString:urlString];
-    
-//    [webView loadHTMLString:urlString baseURL:nil];
-//    [webView loadRequest:[NSURLRequest requestWithURL:url]];
-    
-//    NSURL *url = [NSURL URLWithString:self.urlString];
     NSURLRequest *request =[NSURLRequest requestWithURL:url];
     [webView loadRequest:request];
+    
     [self.view addSubview:webView];
 }
 

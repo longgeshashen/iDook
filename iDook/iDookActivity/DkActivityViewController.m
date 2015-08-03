@@ -132,7 +132,7 @@
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    debugLog(@"选中某一行，查看动态详情，加载url数据");
+    
     DKActivityDetailViewController *activityDetailV = [[DKActivityDetailViewController alloc] init];
     activityDetailV.hidesBottomBarWhenPushed = YES;
     activityDetailV.urlString = [[dataArray objectAtIndex:indexPath.row] objectForKey:@"url"];

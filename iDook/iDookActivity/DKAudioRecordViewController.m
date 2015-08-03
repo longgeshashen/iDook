@@ -29,13 +29,12 @@
 }
 
 #pragma mark --------
-//返回
-- (void)backButtonClick:(UIButton *)btn {
+//
+- (void)audioSure {
     if (self.delegate&&[self.delegate respondsToSelector:@selector(getAudio: andAudioTime:)]) {
         [self.delegate getAudio:self.voice.recordPath andAudioTime:self.voice.recordTime];
     }
-    [self dismissViewControllerAnimated:YES completion:^{
-    }];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 #pragma mark - 录音
 - (void)loadMyViews{
@@ -48,12 +47,22 @@
     [button setTitle:@"按住录音" forState:UIControlStateNormal];
     [self.view addSubview:button];
     
+    //录音按钮操作
     // Set record start action for UIControlEventTouchDown
     [button addTarget:self action:@selector(recordStart) forControlEvents:UIControlEventTouchDown];
     // Set record end action for UIControlEventTouchUpInside
     [button addTarget:self action:@selector(recordEnd) forControlEvents:UIControlEventTouchUpInside];
     // Set record cancel action for UIControlEventTouchUpOutside
     [button addTarget:self action:@selector(recordCancel) forControlEvents:UIControlEventTouchUpOutside];
+    
+    //
+    UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightBtn.frame = CGRectMake(0, 0, 40, 35);
+    [rightBtn addTarget:self action:@selector(audioSure) forControlEvents:UIControlEventTouchUpInside];
+    [rightBtn setTitle:@"确定" forState:UIControlStateNormal];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
+    self.navigationItem.rightBarButtonItem = rightItem;
+
 }
 
 #pragma mark - 录音方法

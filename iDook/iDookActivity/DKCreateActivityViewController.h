@@ -17,7 +17,7 @@
 
 @interface DKCreateActivityViewController : DKBaseViewController<UITableViewDelegate,UITableViewDataSource,UITextViewDelegate,DkAddImageViewDelegate,UIActionSheetDelegate,CTAssetsPickerControllerDelegate,PhotoPickerControllerDelegate,UINavigationControllerDelegate,DKShowlocationViewControllerDelegate,DKAudioRecordViewControllerDelegate>
 
-@property (nonatomic,retain) UITableView *createTableView;//列表
+@property (nonatomic, retain) UITableView *createTableView;//列表
 @property (retain, nonatomic) AVAudioPlayer *avPlay;//play
 
 @end

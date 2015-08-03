@@ -51,14 +51,14 @@
 }
 #pragma mark --------
 //返回
-- (void)backButtonClick:(UIButton *)btn {
-//    [_locService stopUserLocationService];
-    if (self.delegate&&[self.delegate respondsToSelector:@selector(getMylocation:)]) {
-        [self.delegate getMylocation:myLocationString];
-    }
-    [self dismissViewControllerAnimated:YES completion:^{
-    }];
-}
+//- (void)backButtonClick:(UIButton *)btn {
+////    [_locService stopUserLocationService];
+//    if (self.delegate&&[self.delegate respondsToSelector:@selector(getMylocation:)]) {
+//        [self.delegate getMylocation:myLocationString];
+//    }
+//    [self dismissViewControllerAnimated:YES completion:^{
+//    }];
+//}
 #pragma mark---
 - (void)loadMyViews{
     
@@ -74,7 +74,22 @@
     _mapView.showsUserLocation = YES;//显示定位图层
     
     _geocodesearch = [[BMKGeoCodeSearch alloc]init];
+    
+    //搜索按钮
+    UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightBtn.frame = CGRectMake(0, 0, 40, 35);
+    [rightBtn addTarget:self action:@selector(locationSure) forControlEvents:UIControlEventTouchUpInside];
+    [rightBtn setTitle:@"确定" forState:UIControlStateNormal];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
+    self.navigationItem.rightBarButtonItem = rightItem;
 
+}
+- (void)locationSure{
+
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(getMylocation:)]) {
+        [self.delegate getMylocation:myLocationString];
+    }
+    [self.navigationController popViewControllerAnimated:YES];
 }
 /**
  *用户位置更新后，会调用此函数
